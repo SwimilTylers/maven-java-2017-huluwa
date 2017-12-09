@@ -13,12 +13,16 @@ public class Position extends BasePosition {
         coord = new _2Coordinate(x,y);
     }
 
+    public String visualize(){
+        if(content == null)
+            return "{empty} ";
+        else
+            return "{" + content.TellMyName() + "}";
+    }
+
     @Override
     public String toString(){
-        if(content == null)
-            return coord + "{empty} ";
-        else
-            return coord + " {" + content.TellMyName() + "}";
+        return coord + visualize();
     }
 
 

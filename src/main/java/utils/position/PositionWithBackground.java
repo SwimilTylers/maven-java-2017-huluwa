@@ -16,10 +16,10 @@ public class PositionWithBackground extends Position {
     }
 
     @Override
-    public String toString(){
+    public String visualize(){
         if(content == null)
-            return coord + backgrounds.toString();
+            return backgrounds.toString();
         else
-            return coord + content.TellMyName();
+            return content.Visualize();
     }
 }

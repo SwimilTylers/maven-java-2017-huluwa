@@ -3,6 +3,7 @@ package character.hero;
 import character.Beings;
 import character.Representative;
 import character.hero.Huluwas.*;
+import utils.FOREGROUNDS;
 import utils.coordinate._2Coordinate;
 import utils.layout.Layout;
 import utils.layout.LayoutBrief;
@@ -22,12 +23,13 @@ public class Grandpa extends Beings implements Representative {
 
     public Grandpa(_2Coordinate birthplace){
         super(birthplace);
+        super.ChangeVisual(FOREGROUNDS.Elder);
         if(DUPLICATED_LOCK)
             throw null;
         DUPLICATED_LOCK = true;
     }
 
-    @Override
+
     public void DefaultConstituents(LayoutBrief init){
         SetLayout(init);
         if(CurrentLayout.nodes.length != 7) throw null;
@@ -46,7 +48,7 @@ public class Grandpa extends Beings implements Representative {
             throw null;
         }
     */
-    @Override
+
     public void RangeConstituents(LayoutBrief layout){
         SetLayout(layout);
         for (Huluwa baby:Huluwas
@@ -56,12 +58,12 @@ public class Grandpa extends Beings implements Representative {
         }
     }
 
-    @Override
+
     public void SortConstituents(Sorter sorter, ComparingInterface cmpInterface){
         sorter.Sort(CurrentLayout, cmpInterface);
     }
 
-    @Override
+
     public Beings Hail(String name){
         if(name == this.TellMyName())
             return this;

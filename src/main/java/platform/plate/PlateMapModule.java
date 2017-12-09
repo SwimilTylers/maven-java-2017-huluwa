@@ -31,7 +31,7 @@ public class PlateMapModule implements PlatformMapModule {
         }
     }
 
-    PlateMapModule(_2Coordinate granularity, _2Coordinate start, int XNum, int YNum, PFactory Factory, Object... Additionals)
+    PlateMapModule(_2Coordinate granularity, _2Coordinate start, int XNum, int YNum, PFactory Factory, Enum EnumOption, Object... Additionals)
         throws MapExpansionFailure
     {
         this.granularity = new _2Coordinate(granularity);
@@ -45,7 +45,7 @@ public class PlateMapModule implements PlatformMapModule {
         try {
             for (int i = 0; i < size[COORD.Y.d()]; i++) {
                 for (int j = 0; j < size[COORD.X.d()]; j++) {
-                    Map[i][j] = Factory.NewPosition(start.X() + granularity.X() * j, start.Y() + granularity.Y() * i, Additionals);
+                    Map[i][j] = Factory.NewPosition(EnumOption, start.X() + granularity.X() * j, start.Y() + granularity.Y() * i);
                 }
             }
         }catch(Exception ex){System.out.println(ex.getMessage()); }
@@ -53,7 +53,7 @@ public class PlateMapModule implements PlatformMapModule {
 
 
 
-    @Override
+
     public Position Location(Coordinate _coord){
         if(_coord.dimension != 2)    throw null;
         _2Coordinate coord = (_2Coordinate)_coord;
@@ -67,7 +67,7 @@ public class PlateMapModule implements PlatformMapModule {
         return Map[idx[0]][idx[1]];
     }
 
-    @Override
+
     public Position[] Location(Coordinate[] coords){
         Position[] ret = new Position[coords.length];
         for (int i = 0; i < coords.length; i++) {
@@ -76,7 +76,7 @@ public class PlateMapModule implements PlatformMapModule {
         return ret;
     }
 
-    @Override
+
     public String MakeEveryoneResponse(){
         String ret = new String();
         for (Position[] row:Map
@@ -84,10 +84,7 @@ public class PlateMapModule implements PlatformMapModule {
             String rowString = new String();
             for (Position col:row
                     ) {
-                if(col.isOccupied())
-                    rowString += ("{" + col.getContent().TellMyName() + "}\t");
-                else
-                    rowString += "{...}\t";
+                rowString += (col.visualize() + "\t");
             }
             ret += (rowString + "\n");
         }

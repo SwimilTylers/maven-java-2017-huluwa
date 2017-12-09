@@ -1,5 +1,6 @@
 package character;
 
+import utils.FOREGROUNDS;
 import utils.coordinate._2Coordinate;
 import utils.layout.Layout;
 import utils.position.BasePosition;
@@ -7,6 +8,7 @@ import utils.position.BasePosition;
 abstract public class Beings {
     private BasePosition where;
     private _2Coordinate birthplace;
+    private FOREGROUNDS visualization = FOREGROUNDS.Folk;
 //    private ArrayList<Beings> Friends;
 
     public Beings(_2Coordinate birthplace){
@@ -63,6 +65,14 @@ abstract public class Beings {
         BasePosition temp = b.JumpOut();
         b.JumpTO(a.JumpOut());
         a.JumpTO(temp);
+    }
+
+    protected void ChangeVisual(FOREGROUNDS newVisual){
+        visualization = newVisual;
+    }
+
+    public String Visualize(){
+        return visualization.getName();
     }
 
     public boolean FindMyPlaceInLayout(Layout layout){

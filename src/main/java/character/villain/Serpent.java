@@ -4,6 +4,7 @@ import character.Beings;
 import character.Representative;
 import character.villain.Subs.Minion;
 import character.villain.Subs.Scorpion;
+import utils.FOREGROUNDS;
 import utils.coordinate._2Coordinate;
 import utils.layout.Layout;
 import utils.layout.LayoutBrief;
@@ -20,6 +21,7 @@ public class Serpent extends Beings implements Representative {
 
     public Serpent(_2Coordinate birthplace){
         super(birthplace);
+        super.ChangeVisual(FOREGROUNDS.Snake);
         if(DUPLICATED_LOCK)
             throw null;
         DUPLICATED_LOCK = true;
@@ -29,7 +31,7 @@ public class Serpent extends Beings implements Representative {
         return SoldierUnderCommand;
     }
 
-    @Override
+
     public void DefaultConstituents(LayoutBrief init){
         SetLayout(init);
         General = new Scorpion(null);
@@ -47,7 +49,7 @@ public class Serpent extends Beings implements Representative {
             throw null;
         }
     */
-    @Override
+
     public void RangeConstituents(LayoutBrief layout){
         SetLayout(layout);
         PrepareForNewDesignation();
@@ -65,12 +67,12 @@ public class Serpent extends Beings implements Representative {
         SoldierUnderCommand =  remain > 0 ? remain : 0;
     }
 
-    @Override
+
     public void SortConstituents(Sorter sorter, ComparingInterface cmpInterface){
         throw null;
     }
 
-    @Override
+
     public Beings Hail(String name){
         if(this.TellMyName() == name)
             return this;

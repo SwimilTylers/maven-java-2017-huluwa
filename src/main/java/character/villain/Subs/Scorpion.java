@@ -1,12 +1,14 @@
 package character.villain.Subs;
 
 import character.Subordinate;
+import utils.FOREGROUNDS;
 import utils.coordinate._2Coordinate;
 
 public class Scorpion extends Subordinate{
 
     public Scorpion(_2Coordinate birthplace){
         super(birthplace);
+        super.ChangeVisual(FOREGROUNDS.Scorpion);
     }
 
     @Override

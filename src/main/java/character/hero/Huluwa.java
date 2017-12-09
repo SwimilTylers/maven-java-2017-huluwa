@@ -1,6 +1,7 @@
 package character.hero;
 
 import character.Subordinate;
+import utils.FOREGROUNDS;
 import utils.HLW_COLOR;
 import utils.HLW_SENIORITY;
 import utils.coordinate._2Coordinate;
@@ -14,6 +15,7 @@ abstract public class Huluwa extends Subordinate{
 
     public Huluwa(_2Coordinate birthplace){
         super(birthplace);
+        super.ChangeVisual(FOREGROUNDS.Young);
         TotalBrother++;
     }
 /*

@@ -69,12 +69,18 @@ public class Plate{
     public static void main(String[] argv){
         Grandpa grandpa = new Grandpa(new _2Coordinate(6,2));
         Serpent serpent = new Serpent(new _2Coordinate(9,12));
+
+
+
         try {
+
+            PlateMapModule MapModule = new PlateMapModule_Background(PlateSettings.Regularized.granularity(),
+                    PlateSettings.Regularized.start(),
+                    PlateSettings.Regularized.XNum(),
+                    PlateSettings.Regularized.YNum(), BACKGROUNDS.Tree);
+
             Plate world = Plate.CreateRealm(PlateSettings.Regularized,
-                    new PlateMapModule_Background(PlateSettings.Regularized.granularity(),
-                            PlateSettings.Regularized.start(),
-                            PlateSettings.Regularized.XNum(),
-                            PlateSettings.Regularized.YNum(), BACKGROUNDS.Tree), null, grandpa, serpent);
+                    MapModule, null, grandpa, serpent);
             grandpa.DefaultConstituents(new LayoutBrief(world.MapModule, Layout.Changshe));
             serpent.DefaultConstituents(new LayoutBrief(world.MapModule, Layout.Heyi));
 
