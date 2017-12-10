@@ -15,7 +15,7 @@ public class PlateMapModule implements PlatformMapModule {
 
     final protected Position[][] Map;
 
-    PlateMapModule(_2Coordinate granularity, _2Coordinate start, int XNum, int YNum){
+    public PlateMapModule(_2Coordinate granularity, _2Coordinate start, int XNum, int YNum){
         this.granularity = new _2Coordinate(granularity);
         this.start = new _2Coordinate(start);
         size = new int[2];

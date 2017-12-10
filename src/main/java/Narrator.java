@@ -3,10 +3,13 @@ import Exceptions.plate.MapExpansionFailure;
 import character.Beings;
 import character.Representative;
 import character.hero.Grandpa;
+import character.villain.Serpent;
 import character.villain.Subs.Scorpion;
 import platform.plate.*;
 import utils.BACKGROUNDS;
 import utils.coordinate._2Coordinate;
+import utils.factory.PlateMapBKModules;
+import utils.factory.PlateMapModules;
 import utils.layout.Layout;
 import utils.layout.LayoutBrief;
 
@@ -17,6 +20,7 @@ public class Narrator {
 
     static private Representative GoodmanLeader;
     static private Representative BadguyLeader;
+
 
     static void ThereWasAWorld()throws MapExpansionFailure {
         Background = new PlateMapModule_Background(
@@ -29,16 +33,10 @@ public class Narrator {
         Manip = null;
     }
 
-    static void ThereWereSuchLeaders(Beings Good, Beings Bad) throws LeaderNotQualified {
-        if(Good instanceof Representative)
-            GoodmanLeader = (Representative) Good;
-        else
-            throw new LeaderNotQualified(Good.TellMyName() + " is not a qualified GoodmanLeader", Good);
-        if(Bad instanceof Representative)
-            BadguyLeader = (Representative) Bad;
-        else
-            throw new LeaderNotQualified(Bad.TellMyName() + " is not a qualified BadguyLeader", Bad);
-        Personae = Plate.CreateRealm(PlateSettings.Regularized, Background, Manip, Good, Bad);
+    static void ConqueredByThoseLeaders(Representative Good, Representative Bad) throws LeaderNotQualified {
+        GoodmanLeader = Good;
+        BadguyLeader = Bad;
+        Personae = Plate.CreateRealm(PlateSettings.Regularized, Background, Manip, (Beings)Good, (Beings)Bad);
     }
 
     static void TheyLedManyPeople(_2Coordinate[] GoodMan, _2Coordinate[] BadGuy){
@@ -54,10 +52,11 @@ public class Narrator {
         System.out.println(Background.MakeEveryoneResponse());
     }
 
-    public static void main(String[] argv){
+
+    static void StoryStyleOne(){
         try{
             ThereWasAWorld();
-            ThereWereSuchLeaders(new Grandpa(new _2Coordinate(6,2)), new Scorpion(new _2Coordinate(9,12)));
+            ConqueredByThoseLeaders(new Grandpa(new _2Coordinate(6,2)), new Serpent(new _2Coordinate(9,12)));
             TheyLedManyPeople(Layout.Changshe, Layout.Heyi);
             Current();
 
@@ -79,5 +78,27 @@ public class Narrator {
         catch (LeaderNotQualified ex){
             System.out.println("Another bad story.");
         }
+    }
+
+    static void StoryStyleTwo(){
+        GoodmanLeader = new Grandpa(new _2Coordinate(6,2));
+        BadguyLeader = new Serpent(new _2Coordinate(9,12));
+
+
+        Background = PlateMapBKModules.InitializeMapModule(PlateSettings.Regularized, BACKGROUNDS.Tree);
+        Manip = null;
+        Personae = Plate.CreateRealm(PlateSettings.Regularized, Background, Manip, (Beings)GoodmanLeader, (Beings)BadguyLeader);
+
+        TheyLedManyPeople(Layout.Changshe, Layout.Heyi); Current();
+
+        HeChangeTheTeam(BadguyLeader, Layout.Fanggang); Current();
+        HeChangeTheTeam(BadguyLeader, Layout.Fengshi); Current();
+        HeChangeTheTeam(BadguyLeader, Layout.Yanyue); Current();
+        HeChangeTheTeam(BadguyLeader, Layout.Yanxing); Current();
+    }
+
+    public static void main(String[] argv){
+        // StoryStyleOne();
+        StoryStyleTwo();
     }
 }

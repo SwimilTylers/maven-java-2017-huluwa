@@ -17,7 +17,7 @@ public class PositionBKFactory implements PFactory<PositionWithBackground>{
         if(!(coordinates[1] instanceof Double))
             throw new CoordinateIncompatibleException(coordinates[1], "Second Coordinate is not a Double as required", coordinates);
         if(!(EnumOptions instanceof BACKGROUNDS))
-            throw new BackgroundIncompatibleException("Background should be a BACKGROUND enum", coordinates[2]);
+            throw new BackgroundIncompatibleException("Background should be a BACKGROUND enum", EnumOptions);
         return new PositionWithBackground(((Double) coordinates[0]), ((Double) coordinates[1]), ((BACKGROUNDS) EnumOptions));
     }
 }
