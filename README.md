@@ -5,17 +5,40 @@ characters are: Huluwas, grandpa, minions, serpent and
 scorpion. We will take a close look at its whole formation in this manual.
 
 The whole dependency structure of the project is illustrated [here](./UML/Project.png). 
-If you want display the demo, please run **./platform/Plate.java**
+If you want display the demo, please run our __NEW__ descriptor `Narrator`, or ./platform/Plate.java in an old style.
 
 We have apply some __new__ __features__ to our project, which is highlighted 
 by __'*'__ after the title. If you want to view the history version, 
-please check Git history in my personal Github https://github.com/SwimilTylers/java-2017-huluwa
+please check Git history in my personal [Github repository](https://github.com/SwimilTylers/maven-java-2017-huluwa).
 
 ## Background Emoji*
 
-## Factory and decorator*
+At this revision, we apply emoji-based background instead of naive word implications.
+Meanwhile, it is noticeable that the characters have been equipped with emoji as well.
+In order to perform this new feature, we have derive an inherit class - `PlateMapModule_Background`, relative to 
+`PlateMapModule`, and `PositionWithBackground` to `Position`. _Trinity_ isolates PlateMapModule from Plate, which
+is facilitated from it when deploy our new MapModule mentioned above. The description of emoji lies in
+`enum BACKGROUDNS` and `enum FOREGROUNDS`. 
 
-## Exceptions*
+## Factory and decorator*
+We add factory in this revision. All the factory class locates in utils.factory. The implement of factory heads for the 
+problem which allows PlateMapModule to generate Map flexibly. Meanwhile, factory class `PlateMapModules` and its 
+derivative `PlateMapBKModules` integrate deployment and design of the Map formation.
+
+    static public PlateMapModule_Background InitializeMapModule(PlateSettings Settings, Enum EnumOptions, ArrayList<Pair<BACKGROUNDS, Layout>> layouts);
+
+Designing pattern decorator has been employed on `Plate`, as it is shown below
+
+    static public Plate CreateRealm(PlateSettings Settings, PlateMapModule MapModule, PlateLayoutManipModule LayoutModule, Beings... Characters);
+    
+The diversity of combination has warrant the fluidity of project structure.
+
+## Exceptions and Generic*
+
+    public interface PFactory<P extends Position> {
+        P NewPosition(Object... GeneralOptions) throws Exception;
+        P NewPosition(Enum EnumOptions, Object... GeneralOptions) throws Exception;
+    }
 
 ## Maven it*
 The structure of this project has transformed into total new form.
@@ -27,11 +50,11 @@ our project automatically.
 This time, we add a new feature in our project. In order to 
 follow the SOLID principle, we apply several modifications to our
  our object formation. The main work is to separate the 'huge'
- __Plate__ object. In our new revision, the __Plate__ is formed of 
-three different objects: __PlateLayoutManipModule__, __PlateMapModule__, 
-and modified __Plate__.  __PlateMapModule__ is responsible for 
-Coordination-relates, while __PlateLayoutManipModule__ for the transformation 
-of Layout. Our new __Plate__ is now free from redundant functionality and 
+ `Plate` object. In our new revision, the `Plate` is formed of 
+three different objects: `PlateLayoutManipModule`, `PlateMapModule`, 
+and modified `Plate`.  `PlateMapModule` is responsible for 
+Coordination-relates, while `PlateLayoutManipModule` for the transformation 
+of Layout. Our new `Plate` is now free from redundant functionality and 
 focuses on Character deployment. 
 
 ![Trinity](./UML/Package%20plate.png)
@@ -39,7 +62,7 @@ focuses on Character deployment.
 ## Scepter
 
 Resemble to the above effort, we apply interface to standardize 
-the behavior of Superiors. Thus we employ __Representatives__. 
+the behavior of Superiors. Thus we employ `Representatives`. 
 With this interface, we want to decouple the application from 
 the concrete implementation of the lower layer.
 

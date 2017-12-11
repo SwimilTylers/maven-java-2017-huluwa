@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a3930087-2982-446a-8260-e7d8618a53c0" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/utils/factory/PlateMapBKModules.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/utils/factory/PlateMapModules.java" />
+    <list default="true" id="a3930087-2982-446a-8260-e7d8618a53c0" name="Default" comment="Narrator">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Narrator.java" afterPath="$PROJECT_DIR$/src/main/java/Narrator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/platform/plate/PlateMapModule.java" afterPath="$PROJECT_DIR$/src/main/java/platform/plate/PlateMapModule.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/utils/factory/PositionBKFactory.java" afterPath="$PROJECT_DIR$/src/main/java/utils/factory/PositionBKFactory.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -20,66 +16,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="Plate.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/platform/plate/Plate.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="69" column="8" lean-forward="true" selection-start-line="69" selection-start-column="8" selection-end-line="112" selection-end-column="9" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Narrator.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Narrator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="33" column="5" lean-forward="true" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Serpent.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/character/villain/Serpent.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1281">
-              <caret line="74" column="0" lean-forward="true" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="PlateMapModule_Background.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/platform/plate/PlateMapModule_Background.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
+            <state relative-caret-position="189">
               <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PlateMapModules.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/utils/factory/PlateMapModules.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PlateMapBKModules.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/utils/factory/PlateMapBKModules.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="546">
-              <caret line="26" column="20" lean-forward="false" selection-start-line="26" selection-start-column="20" selection-end-line="26" selection-end-column="20" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -97,9 +39,33 @@
       <file leaf-file-name="PFactory.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/utils/factory/PFactory.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="6" column="79" lean-forward="false" selection-start-line="6" selection-start-column="79" selection-end-line="6" selection-end-column="79" />
+            <state relative-caret-position="84">
+              <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="7" selection-end-column="1" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PlateMapModules.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/utils/factory/PlateMapModules.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="168">
+              <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PlateMapBKModules.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/utils/factory/PlateMapBKModules.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="525">
+              <caret line="33" column="151" lean-forward="false" selection-start-line="33" selection-start-column="4" selection-end-line="33" selection-end-column="151" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -107,19 +73,19 @@
       <file leaf-file-name="PlateMapModule.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/platform/plate/PlateMapModule.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="720">
+            <state relative-caret-position="1680">
               <caret line="86" column="49" lean-forward="false" selection-start-line="86" selection-start-column="49" selection-end-line="86" selection-end-column="49" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="21">
-                <caret line="22" column="26" lean-forward="false" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
+              <first_editor relative-caret-position="840">
+                <caret line="40" column="5" lean-forward="false" selection-start-line="40" selection-start-column="5" selection-end-line="40" selection-end-column="5" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -164,13 +130,13 @@
         <option value="$PROJECT_DIR$/src/main/java/character/villain/Serpent.java" />
         <option value="$PROJECT_DIR$/src/main/java/character/villain/Subs/Minion.java" />
         <option value="$PROJECT_DIR$/src/main/java/character/villain/Subs/Scorpion.java" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/main/java/utils/factory/MFactory.java" />
         <option value="$PROJECT_DIR$/src/main/java/utils/factory/MapModuleFactory.java" />
         <option value="$PROJECT_DIR$/src/main/java/utils/factory/PlateMapModules.java" />
         <option value="$PROJECT_DIR$/src/main/java/utils/factory/PositionBKFactory.java" />
         <option value="$PROJECT_DIR$/src/main/java/utils/factory/PlateMapBKModules.java" />
         <option value="$PROJECT_DIR$/src/main/java/Narrator.java" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -219,8 +185,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -252,33 +216,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="character" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="maven-java-2017-huluwa" type="b2602c69:ProjectViewProjectNode" />
-              <item name="maven-java-2017-huluwa" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="character" type="462c0819:PsiDirectoryNode" />
-              <item name="villain" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="maven-java-2017-huluwa" type="b2602c69:ProjectViewProjectNode" />
-              <item name="maven-java-2017-huluwa" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="platform" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="maven-java-2017-huluwa" type="b2602c69:ProjectViewProjectNode" />
-              <item name="maven-java-2017-huluwa" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="platform" type="462c0819:PsiDirectoryNode" />
-              <item name="plate" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="maven-java-2017-huluwa" type="b2602c69:ProjectViewProjectNode" />
@@ -301,8 +239,10 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
+      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="Scratches" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -312,6 +252,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/UML/Project.png" />
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
@@ -478,7 +419,9 @@
       <workItem from="1512821434110" duration="1444000" />
       <workItem from="1512823892380" duration="7366000" />
       <workItem from="1512834928806" duration="482000" />
-      <workItem from="1512886191721" duration="4126000" />
+      <workItem from="1512886191721" duration="4741000" />
+      <workItem from="1512966675487" duration="738000" />
+      <workItem from="1512996068689" duration="2614000" />
     </task>
     <task id="LOCAL-00001" summary="With Background">
       <created>1512834972099</created>
@@ -494,11 +437,18 @@
       <option name="project" value="LOCAL" />
       <updated>1512886857310</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Narrator">
+      <created>1512890347989</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1512890347989</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14687000" />
+    <option name="totallyTimeSpent" value="18654000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -515,7 +465,6 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32915717" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32915717" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -526,7 +475,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32915717" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24302575" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17489271" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -538,6 +487,7 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32915717" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -577,7 +527,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="With Background" />
     <MESSAGE value="update readme" />
-    <option name="LAST_COMMIT_MESSAGE" value="update readme" />
+    <MESSAGE value="Narrator" />
+    <option name="LAST_COMMIT_MESSAGE" value="Narrator" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -586,27 +537,10 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/utils/BACKGROUNDS.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="4" column="4" lean-forward="false" selection-start-line="4" selection-start-column="4" selection-end-line="20" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/utils/FOREGROUNDS.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="4" column="45" lean-forward="false" selection-start-line="4" selection-start-column="45" selection-end-line="4" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/utils/position/PositionWithBackground.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="399">
           <caret line="21" column="12" lean-forward="true" selection-start-line="21" selection-start-column="12" selection-end-line="21" selection-end-column="12" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -631,12 +565,12 @@
         <state relative-caret-position="294">
           <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
           <folding>
-            <element signature="e#575#576#0" expanded="true" />
-            <element signature="e#608#609#0" expanded="true" />
-            <element signature="e#1875#1876#0" expanded="true" />
-            <element signature="e#1916#1917#0" expanded="true" />
-            <element signature="e#1948#1949#0" expanded="true" />
-            <element signature="e#1994#1995#0" expanded="true" />
+            <element signature="e#575#576#0" expanded="false" />
+            <element signature="e#608#609#0" expanded="false" />
+            <element signature="e#1875#1876#0" expanded="false" />
+            <element signature="e#1916#1917#0" expanded="false" />
+            <element signature="e#1948#1949#0" expanded="false" />
+            <element signature="e#1994#1995#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -645,7 +579,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -653,7 +586,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -734,17 +666,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="0">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/utils/coordinate/RelaCoordinate.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -791,7 +712,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="84">
           <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -799,11 +719,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="267">
           <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-          <folding>
-            <element signature="e#496#497#0" expanded="false" />
-            <element signature="e#539#540#0" expanded="false" />
-            <element signature="e#612#613#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -828,7 +743,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
           <caret line="16" column="41" lean-forward="false" selection-start-line="16" selection-start-column="41" selection-end-line="16" selection-end-column="41" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -836,7 +750,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="84">
           <caret line="4" column="4" lean-forward="false" selection-start-line="4" selection-start-column="4" selection-end-line="20" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -844,10 +757,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="441">
           <caret line="24" column="35" lean-forward="false" selection-start-line="24" selection-start-column="35" selection-end-line="24" selection-end-column="35" />
-          <folding>
-            <element signature="e#516#517#0" expanded="false" />
-            <element signature="e#558#559#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -855,7 +764,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="84">
           <caret line="4" column="45" lean-forward="false" selection-start-line="4" selection-start-column="45" selection-end-line="4" selection-end-column="45" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -864,12 +772,12 @@
         <state relative-caret-position="1218">
           <caret line="70" column="34" lean-forward="false" selection-start-line="70" selection-start-column="34" selection-end-line="70" selection-end-column="34" />
           <folding>
-            <element signature="e#575#576#0" expanded="true" />
-            <element signature="e#608#609#0" expanded="true" />
-            <element signature="e#1875#1876#0" expanded="true" />
-            <element signature="e#1916#1917#0" expanded="true" />
-            <element signature="e#1948#1949#0" expanded="true" />
-            <element signature="e#1994#1995#0" expanded="true" />
+            <element signature="e#575#576#0" expanded="false" />
+            <element signature="e#608#609#0" expanded="false" />
+            <element signature="e#1875#1876#0" expanded="false" />
+            <element signature="e#1916#1917#0" expanded="false" />
+            <element signature="e#1948#1949#0" expanded="false" />
+            <element signature="e#1994#1995#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -878,7 +786,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="483">
           <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -908,33 +815,718 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="336">
           <caret line="18" column="30" lean-forward="false" selection-start-line="18" selection-start-column="30" selection-end-line="18" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/utils/factory/MFactory.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/platform/plate/PlateMapModule.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1680">
+          <caret line="86" column="49" lean-forward="false" selection-start-line="86" selection-start-column="49" selection-end-line="86" selection-end-column="49" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
+    <entry file="file://$PROJECT_DIR$/src/main/java/utils/factory/PlateMapModules.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/character/Representative.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="6" column="17" lean-forward="false" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="21">
-            <caret line="22" column="26" lean-forward="false" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
             <folding />
           </first_editor>
           <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/utils/factory/PFactory.java">
+    <entry file="uml://JAVA/Exceptions">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>Exceptions</OriginalElement>
+          <nodes>
+            <node x="" y="">Exceptions.character.LeaderNotQualified</node>
+            <node x="" y="">Exceptions.plate.MapExpansionFailure</node>
+            <node x="" y="">Exceptions.position.BackgroundIncompatibleException</node>
+            <node x="" y="">Exceptions.position.CoordinateIncompatibleException</node>
+            <node x="" y="">Exceptions.position.CoordinateMissingException</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="0.9" x="39.0" y="163.0" />
+          <SelectedNodes />
+          <Categories />
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement />
+          <nodes>
+            <node x="688.1435332169478" y="960.0">platform.PlatformMapModule</node>
+            <node x="218.78951514497953" y="1105.0">platform.plate.PlateSettings</node>
+            <node x="1506.4445234064908" y="960.0">Exceptions.position.CoordinateIncompatibleException</node>
+            <node x="955.1435332169478" y="960.0">Exceptions.position.CoordinateMissingException</node>
+            <node x="1765.9594127099494" y="590.0">character</node>
+            <node x="1787.700484138521" y="465.0">utils.FOREGROUNDS</node>
+            <node x="1361.4445234064908" y="960.0">utils.factory.PFactory</node>
+            <node x="2459.0688712055858" y="1415.0">utils.factory.PlateMapBKModules</node>
+            <node x="1882.9230378722523" y="1105.0">utils.factory.PositionBKFactory</node>
+            <node x="491.1474325039354" y="1415.0">platform.plate.Plate</node>
+            <node x="1028.8397045389192" y="785.0">utils.position</node>
+            <node x="1004.4279398330368" y="310.0">utils.layout</node>
+            <node x="0.0" y="1650.0">utils.HLW_SENIORITY</node>
+            <node x="2410.9022045389192" y="1220.0">Exceptions.plate.MapExpansionFailure</node>
+            <node x="2722.7361506173506" y="960.0">Exceptions.position.BackgroundIncompatibleException</node>
+            <node x="492.7611060540705" y="95.0">utils.coordinate</node>
+            <node x="118.60346351208841" y="0.0">utils.COORD</node>
+            <node x="1113.671552318645" y="1105.0">utils.factory.PositionFactory</node>
+            <node x="2109.9022045389192" y="1220.0">platform.plate.PlateMapModule_Background</node>
+            <node x="1545.6025588121513" y="465.0">utils.sorter</node>
+            <node x="619.7789498836146" y="1220.0">utils.factory.PlateMapModules</node>
+            <node x="2217.9137143493763" y="590.0">utils.BACKGROUNDS</node>
+            <node x="1859.5070234064908" y="785.0">Exceptions.character.LeaderNotQualified</node>
+            <node x="131.67300068575355" y="465.0">platform.plate.PlateLayoutManipModule</node>
+            <node x="225.0" y="1650.0">utils.HLW_COLOR</node>
+            <node x="710.9970476827094" y="1105.0">platform.plate.PlateMapModule</node>
+            <node x="2077.549783216948" y="1570.0">Narrator</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="Narrator" target="utils.layout">
+              <point x="42.28125" y="-17.5" />
+              <point x="2181.331033216948" y="1530.0" />
+              <point x="3049.2361506173506" y="1530.0" />
+              <point x="3049.2361506173506" y="395.0" />
+              <point x="1141.1926457153897" y="395.0" />
+              <point x="61.764705882352985" y="17.5" />
+            </edge>
+            <edge source="utils.factory.PlateMapBKModules" target="utils.factory.PlateMapModules">
+              <point x="-71.00000000000006" y="-17.5" />
+              <point x="2494.5688712055858" y="1305.0" />
+              <point x="716.7789498836146" y="1305.0" />
+              <point x="0.0" y="17.5" />
+            </edge>
+            <edge source="Narrator" target="platform.plate.PlateLayoutManipModule">
+              <point x="-49.96875" y="-17.5" />
+              <point x="2089.081033216948" y="1540.0" />
+              <point x="79.83073623936139" y="1540.0" />
+              <point x="79.83073623936139" y="860.0" />
+              <point x="238.57076514497953" y="860.0" />
+              <point x="238.57076514497953" y="570.0" />
+              <point x="173.17300068575355" y="570.0" />
+              <point x="-83.0" y="17.5" />
+            </edge>
+            <edge source="utils.factory.PlateMapBKModules" target="platform.plate.PlateMapModule_Background">
+              <point x="-47.33333333333337" y="-17.5" />
+              <point x="2518.2355378722523" y="1295.0" />
+              <point x="2285.5272045389192" y="1295.0" />
+              <point x="35.125" y="17.5" />
+            </edge>
+            <edge source="Narrator" target="utils.coordinate">
+              <point x="-57.65625" y="-17.5" />
+              <point x="2081.393533216948" y="1550.0" />
+              <point x="37.13471351208841" y="1550.0" />
+              <point x="37.13471351208841" y="850.0" />
+              <point x="121.17300068575355" y="850.0" />
+              <point x="121.17300068575355" y="150.0" />
+              <point x="496.965651508616" y="150.0" />
+              <point x="-88.2954545454545" y="17.5" />
+            </edge>
+            <edge source="character" target="utils.position">
+              <point x="-15.727272727272748" y="17.5" />
+              <point x="1836.7321399826767" y="695.0" />
+              <point x="1145.7147045389192" y="695.0" />
+              <point x="34.375" y="-17.5" />
+            </edge>
+            <edge source="character" target="utils.layout">
+              <point x="24.71428571428578" y="-17.5" />
+              <point x="1877.1736984242352" y="550.0" />
+              <point x="1973.200484138521" y="550.0" />
+              <point x="1973.200484138521" y="435.0" />
+              <point x="1105.898528068331" y="435.0" />
+              <point x="26.470588235294144" y="17.5" />
+            </edge>
+            <edge source="utils.sorter" target="utils.sorter">
+              <point x="-55.875" y="17.5" />
+              <point x="1564.2275588121513" y="520.0" />
+              <point x="1525.6025588121513" y="520.0" />
+              <point x="1525.6025588121513" y="482.5" />
+              <point x="-74.5" y="-0.0" />
+            </edge>
+            <edge source="platform.plate.Plate" target="platform.plate.PlateMapModule">
+              <point x="9.09375" y="-17.5" />
+              <point x="548.7411825039354" y="1335.0" />
+              <point x="824.2789498836146" y="1335.0" />
+              <point x="824.2789498836146" y="1200.0" />
+              <point x="788.913714349376" y="1200.0" />
+              <point x="-15.583333333333371" y="17.5" />
+            </edge>
+            <edge source="Exceptions.position.CoordinateMissingException" target="utils.position">
+              <point x="-67.75" y="-17.5" />
+              <point x="1022.8935332169478" y="940.0" />
+              <point x="1104.4647045389192" y="940.0" />
+              <point x="-6.875" y="17.5" />
+            </edge>
+            <edge source="platform.plate.PlateMapModule" target="platform.PlatformMapModule">
+              <point x="0.0" y="-17.5" />
+              <point x="804.4970476827094" y="1085.0" />
+              <point x="794.6435332169478" y="1085.0" />
+              <point x="0.0" y="17.5" />
+            </edge>
+            <edge source="platform.PlatformMapModule" target="utils.coordinate">
+              <point x="-79.875" y="-17.5" />
+              <point x="714.7685332169478" y="930.0" />
+              <point x="547.6161825039353" y="930.0" />
+              <point x="547.6161825039353" y="270.0" />
+              <point x="597.8747424177069" y="270.0" />
+              <point x="12.613636363636374" y="17.5" />
+            </edge>
+            <edge source="character" target="utils.coordinate">
+              <point x="74.14285714285711" y="-17.5" />
+              <point x="1926.6022698528066" y="570.0" />
+              <point x="3078.9236506173506" y="570.0" />
+              <point x="3078.9236506173506" y="250.0" />
+              <point x="656.7383787813433" y="250.0" />
+              <point x="71.47727272727275" y="17.5" />
+            </edge>
+            <edge source="platform.plate.PlateMapModule" target="utils.factory.PFactory">
+              <point x="83.11111111111111" y="-17.5" />
+              <point x="887.6081587938205" y="1045.0" />
+              <point x="1382.1111900731576" y="1045.0" />
+              <point x="-41.333333333333314" y="17.5" />
+            </edge>
+            <edge source="Exceptions.character.LeaderNotQualified" target="character">
+              <point x="51.0" y="-17.5" />
+              <point x="2012.5070234064908" y="705.0" />
+              <point x="1899.6412308917675" y="705.0" />
+              <point x="47.18181818181813" y="17.5" />
+            </edge>
+            <edge source="utils.factory.PlateMapModules" target="platform.plate.PlateSettings">
+              <point x="-64.66666666666669" y="-17.5" />
+              <point x="652.1122832169478" y="1200.0" />
+              <point x="356.16451514497953" y="1200.0" />
+              <point x="58.875" y="17.5" />
+            </edge>
+            <edge source="Narrator" target="character">
+              <point x="-3.84375" y="-17.5" />
+              <point x="2135.206033216948" y="1480.0" />
+              <point x="2091.7147045389192" y="1480.0" />
+              <point x="2091.7147045389192" y="695.0" />
+              <point x="1915.3685036190404" y="695.0" />
+              <point x="62.90909090909088" y="17.5" />
+            </edge>
+            <edge source="utils.factory.PlateMapBKModules" target="utils.BACKGROUNDS">
+              <point x="23.666666666666742" y="-17.5" />
+              <point x="2589.2355378722523" y="1365.0" />
+              <point x="2636.4022045389192" y="1365.0" />
+              <point x="2636.4022045389192" y="765.0" />
+              <point x="2361.7262143493763" y="765.0" />
+              <point x="55.3125" y="17.5" />
+            </edge>
+            <edge source="platform.plate.PlateSettings" target="utils.coordinate">
+              <point x="39.25" y="-17.5" />
+              <point x="336.53951514497953" y="1085.0" />
+              <point x="273.2682362393614" y="1085.0" />
+              <point x="273.2682362393614" y="930.0" />
+              <point x="472.8988250459173" y="930.0" />
+              <point x="472.8988250459173" y="230.0" />
+              <point x="564.2383787813433" y="230.0" />
+              <point x="-21.022727272727252" y="17.5" />
+            </edge>
+            <edge source="platform.plate.PlateMapModule_Background" target="utils.position">
+              <point x="-87.8125" y="-17.5" />
+              <point x="2162.5897045389192" y="1180.0" />
+              <point x="1700.7147045389192" y="1180.0" />
+              <point x="1700.7147045389192" y="1055.0" />
+              <point x="1495.9445234064908" y="1055.0" />
+              <point x="1495.9445234064908" y="910.0" />
+              <point x="1159.4647045389192" y="910.0" />
+              <point x="48.125" y="17.5" />
+            </edge>
+            <edge source="platform.plate.PlateMapModule_Background" target="utils.layout">
+              <point x="-17.5625" y="-17.5" />
+              <point x="2232.8397045389192" y="1160.0" />
+              <point x="2194.265302318645" y="1160.0" />
+              <point x="2194.265302318645" y="425.0" />
+              <point x="1114.7220574800956" y="425.0" />
+              <point x="35.29411764705884" y="17.5" />
+            </edge>
+            <edge source="platform.PlatformMapModule" target="utils.position">
+              <point x="79.875" y="-17.5" />
+              <point x="874.5185332169478" y="890.0" />
+              <point x="1035.7147045389192" y="890.0" />
+              <point x="-75.625" y="17.5" />
+            </edge>
+            <edge source="Narrator" target="platform.plate.PlateMapModule">
+              <point x="-19.21875" y="-17.5" />
+              <point x="2119.831033216948" y="1500.0" />
+              <point x="897.1241854372222" y="1500.0" />
+              <point x="897.1241854372222" y="1200.0" />
+              <point x="851.2470476827094" y="1200.0" />
+              <point x="46.75" y="17.5" />
+            </edge>
+            <edge source="utils.factory.PositionBKFactory" target="utils.BACKGROUNDS">
+              <point x="48.25" y="-17.5" />
+              <point x="2027.6730378722523" y="1075.0" />
+              <point x="2243.796552318645" y="1075.0" />
+              <point x="2243.796552318645" y="745.0" />
+              <point x="2273.2262143493763" y="745.0" />
+              <point x="-33.1875" y="17.5" />
+            </edge>
+            <edge source="utils.factory.PositionFactory" target="Exceptions.position.CoordinateIncompatibleException">
+              <point x="65.25" y="-17.5" />
+              <point x="1265.921552318645" y="1065.0" />
+              <point x="1584.1945234064908" y="1065.0" />
+              <point x="-77.75" y="17.5" />
+            </edge>
+            <edge source="utils.sorter" target="utils.layout">
+              <point x="0.0" y="-17.5" />
+              <point x="1620.1025588121513" y="445.0" />
+              <point x="1097.0749986565663" y="445.0" />
+              <point x="17.64705882352945" y="17.5" />
+            </edge>
+            <edge source="character" target="utils.sorter">
+              <point x="-74.14285714285714" y="-17.5" />
+              <point x="1778.3165555670923" y="570.0" />
+              <point x="1638.7275588121513" y="570.0" />
+              <point x="18.625" y="17.5" />
+            </edge>
+            <edge source="Narrator" target="utils.BACKGROUNDS">
+              <point x="34.59375" y="-17.5" />
+              <point x="2173.643533216948" y="1520.0" />
+              <point x="2692.4126212055858" y="1520.0" />
+              <point x="2692.4126212055858" y="755.0" />
+              <point x="2383.8512143493763" y="755.0" />
+              <point x="77.4375" y="17.5" />
+            </edge>
+            <edge source="utils.sorter" target="utils.position">
+              <point x="-18.625" y="17.5" />
+              <point x="1601.4775588121513" y="570.0" />
+              <point x="1100.3397045389192" y="570.0" />
+              <point x="1100.3397045389192" y="765.0" />
+              <point x="1104.4647045389192" y="765.0" />
+              <point x="-6.875" y="-17.5" />
+            </edge>
+            <edge source="utils.position" target="character">
+              <point x="20.625" y="-17.5" />
+              <point x="1131.9647045389192" y="685.0" />
+              <point x="1821.004867255404" y="685.0" />
+              <point x="-31.45454545454544" y="17.5" />
+            </edge>
+            <edge source="platform.plate.PlateLayoutManipModule" target="utils.coordinate">
+              <point x="-62.25" y="-17.5" />
+              <point x="193.92300068575355" y="435.0" />
+              <point x="250.6942795913717" y="435.0" />
+              <point x="250.6942795913717" y="160.0" />
+              <point x="505.3747424177069" y="160.0" />
+              <point x="-79.88636363636363" y="17.5" />
+            </edge>
+            <edge source="Narrator" target="platform.plate.Plate">
+              <point x="-34.59375" y="-17.5" />
+              <point x="2104.456033216948" y="1520.0" />
+              <point x="515.3974325039354" y="1520.0" />
+              <point x="-24.25" y="17.5" />
+            </edge>
+            <edge source="Narrator" target="Exceptions.character.LeaderNotQualified">
+              <point x="-11.53125" y="-17.5" />
+              <point x="2127.518533216948" y="1490.0" />
+              <point x="1665.421552318645" y="1490.0" />
+              <point x="1665.421552318645" y="1085.0" />
+              <point x="1961.5070234064908" y="1085.0" />
+              <point x="0.0" y="17.5" />
+            </edge>
+            <edge source="platform.plate.PlateLayoutManipModule" target="utils.COORD">
+              <point x="-103.75" y="-17.5" />
+              <point x="152.42300068575355" y="445.0" />
+              <point x="108.32072795848057" y="445.0" />
+              <point x="108.32072795848057" y="75.0" />
+              <point x="191.1034635120884" y="75.0" />
+              <point x="14.5" y="17.5" />
+            </edge>
+            <edge source="utils.factory.PlateMapBKModules" target="platform.plate.PlateSettings">
+              <point x="-94.66666666666674" y="-17.5" />
+              <point x="2470.9022045389192" y="1315.0" />
+              <point x="278.7682362393614" y="1315.0" />
+              <point x="278.7682362393614" y="1200.0" />
+              <point x="316.91451514497953" y="1200.0" />
+              <point x="19.625" y="17.5" />
+            </edge>
+            <edge source="platform.plate.Plate" target="utils.position">
+              <point x="21.21875" y="-17.5" />
+              <point x="560.8661825039354" y="1355.0" />
+              <point x="1350.9445234064908" y="1355.0" />
+              <point x="1350.9445234064908" y="920.0" />
+              <point x="1145.7147045389192" y="920.0" />
+              <point x="34.375" y="17.5" />
+            </edge>
+            <edge source="character" target="utils.FOREGROUNDS">
+              <point x="-24.714285714285666" y="-17.5" />
+              <point x="1827.7451269956637" y="570.0" />
+              <point x="1831.450484138521" y="570.0" />
+              <point x="-43.75" y="17.5" />
+            </edge>
+            <edge source="utils.layout" target="utils.position">
+              <point x="8.823529411764724" y="17.5" />
+              <point x="1088.2514692448015" y="445.0" />
+              <point x="1089.3397045389192" y="445.0" />
+              <point x="1089.3397045389192" y="765.0" />
+              <point x="1090.7147045389192" y="765.0" />
+              <point x="-20.625" y="-17.5" />
+            </edge>
+            <edge source="platform.plate.Plate" target="utils.layout">
+              <point x="3.03125" y="-17.5" />
+              <point x="542.6786825039354" y="1325.0" />
+              <point x="609.2789498836146" y="1325.0" />
+              <point x="609.2789498836146" y="425.0" />
+              <point x="1044.133822185978" y="425.0" />
+              <point x="-35.29411764705884" y="17.5" />
+            </edge>
+            <edge source="utils.factory.PositionBKFactory" target="utils.factory.PFactory">
+              <point x="-80.41666666666663" y="-17.5" />
+              <point x="1899.0063712055858" y="1045.0" />
+              <point x="1464.777856739824" y="1045.0" />
+              <point x="41.33333333333337" y="17.5" />
+            </edge>
+            <edge source="utils.factory.PlateMapModules" target="platform.plate.PlateMapModule">
+              <point x="64.66666666666669" y="-17.5" />
+              <point x="781.4456165502813" y="1200.0" />
+              <point x="757.7470476827094" y="1200.0" />
+              <point x="-46.75" y="17.5" />
+            </edge>
+            <edge source="platform.plate.PlateMapModule" target="utils.coordinate">
+              <point x="-41.55555555555554" y="-17.5" />
+              <point x="762.9414921271539" y="1065.0" />
+              <point x="528.2070915948444" y="1065.0" />
+              <point x="528.2070915948444" y="250.0" />
+              <point x="581.056560599525" y="250.0" />
+              <point x="-4.204545454545496" y="17.5" />
+            </edge>
+            <edge source="utils.layout" target="utils.coordinate">
+              <point x="-50.0" y="-17.5" />
+              <point x="1029.4279398330368" y="290.0" />
+              <point x="623.1020151449796" y="290.0" />
+              <point x="37.84090909090909" y="17.5" />
+            </edge>
+            <edge source="platform.plate.Plate" target="utils.BACKGROUNDS">
+              <point x="33.34375" y="-17.5" />
+              <point x="572.9911825039354" y="1375.0" />
+              <point x="1423.4560332169478" y="1375.0" />
+              <point x="1423.4560332169478" y="1200.0" />
+              <point x="2254.796552318645" y="1200.0" />
+              <point x="2254.796552318645" y="755.0" />
+              <point x="2295.3512143493763" y="755.0" />
+              <point x="-11.0625" y="17.5" />
+            </edge>
+            <edge source="character" target="character">
+              <point x="-78.63636363636363" y="17.5" />
+              <point x="1773.823049073586" y="645.0" />
+              <point x="1745.9594127099494" y="645.0" />
+              <point x="1745.9594127099494" y="616.25" />
+              <point x="-86.5" y="8.75" />
+            </edge>
+            <edge source="platform.plate.Plate" target="Exceptions.plate.MapExpansionFailure">
+              <point x="45.46875" y="-17.5" />
+              <point x="585.1161825039354" y="1395.0" />
+              <point x="2446.7355378722523" y="1395.0" />
+              <point x="-71.66666666666669" y="17.5" />
+            </edge>
+            <edge source="platform.plate.Plate" target="platform.plate.PlateMapModule_Background">
+              <point x="39.40625" y="-17.5" />
+              <point x="579.0536825039354" y="1385.0" />
+              <point x="2145.0272045389192" y="1385.0" />
+              <point x="-105.375" y="17.5" />
+            </edge>
+            <edge source="utils.factory.PositionFactory" target="utils.position">
+              <point x="-21.75" y="-17.5" />
+              <point x="1178.921552318645" y="1035.0" />
+              <point x="1236.6435332169478" y="1035.0" />
+              <point x="1236.6435332169478" y="930.0" />
+              <point x="1131.9647045389192" y="930.0" />
+              <point x="20.625" y="17.5" />
+            </edge>
+            <edge source="platform.plate.PlateMapModule_Background" target="utils.BACKGROUNDS">
+              <point x="17.5625" y="-17.5" />
+              <point x="2267.9647045389192" y="1200.0" />
+              <point x="2280.0272045389192" y="1200.0" />
+              <point x="2280.0272045389192" y="765.0" />
+              <point x="2317.4762143493763" y="765.0" />
+              <point x="11.0625" y="17.5" />
+            </edge>
+            <edge source="platform.plate.PlateMapModule" target="utils.COORD">
+              <point x="-83.11111111111109" y="-17.5" />
+              <point x="721.3859365715983" y="1085.0" />
+              <point x="397.28951514497965" y="1085.0" />
+              <point x="397.28951514497965" y="840.0" />
+              <point x="97.32072795848057" y="840.0" />
+              <point x="97.32072795848057" y="65.0" />
+              <point x="162.1034635120884" y="65.0" />
+              <point x="-14.5" y="17.5" />
+            </edge>
+            <edge source="platform.plate.PlateMapModule_Background" target="platform.plate.PlateMapModule">
+              <point x="-122.9375" y="-17.5" />
+              <point x="2127.4647045389192" y="1190.0" />
+              <point x="882.4137143493762" y="1190.0" />
+              <point x="77.91666666666671" y="17.5" />
+            </edge>
+            <edge source="utils.position" target="utils.BACKGROUNDS">
+              <point x="61.875" y="-17.5" />
+              <point x="1173.2147045389192" y="725.0" />
+              <point x="2228.9762143493763" y="725.0" />
+              <point x="-77.4375" y="17.5" />
+            </edge>
+            <edge source="utils.coordinate" target="utils.COORD">
+              <point x="0.0" y="-17.5" />
+              <point x="585.2611060540705" y="75.0" />
+              <point x="220.1034635120884" y="75.0" />
+              <point x="43.5" y="17.5" />
+            </edge>
+            <edge source="platform.plate.PlateMapModule" target="utils.position">
+              <point x="62.33333333333337" y="-17.5" />
+              <point x="866.8303810160428" y="1035.0" />
+              <point x="933.6435332169478" y="1035.0" />
+              <point x="933.6435332169478" y="920.0" />
+              <point x="1076.9647045389192" y="920.0" />
+              <point x="-34.375" y="17.5" />
+            </edge>
+            <edge source="platform.plate.Plate" target="utils.coordinate">
+              <point x="-27.28125" y="-17.5" />
+              <point x="512.3661825039354" y="1365.0" />
+              <point x="196.16451514497953" y="1365.0" />
+              <point x="196.16451514497953" y="890.0" />
+              <point x="391.17300068575344" y="890.0" />
+              <point x="391.17300068575344" y="190.0" />
+              <point x="530.6020151449796" y="190.0" />
+              <point x="-54.65909090909088" y="17.5" />
+            </edge>
+            <edge source="utils.factory.PlateMapBKModules" target="Exceptions.position.BackgroundIncompatibleException">
+              <point x="71.0" y="-17.5" />
+              <point x="2636.5688712055858" y="1385.0" />
+              <point x="2918.953415063743" y="1385.0" />
+              <point x="2918.953415063743" y="1085.0" />
+              <point x="2880.7361506173506" y="1085.0" />
+              <point x="0.0" y="17.5" />
+            </edge>
+            <edge source="platform.plate.Plate" target="platform.plate.PlateSettings">
+              <point x="-9.09375" y="-17.5" />
+              <point x="530.5536825039354" y="1335.0" />
+              <point x="267.7682362393614" y="1335.0" />
+              <point x="267.7682362393614" y="1190.0" />
+              <point x="277.66451514497953" y="1190.0" />
+              <point x="-19.625" y="17.5" />
+            </edge>
+            <edge source="utils.factory.PositionFactory" target="utils.factory.PFactory">
+              <point x="21.75" y="-17.5" />
+              <point x="1222.421552318645" y="1055.0" />
+              <point x="1423.4445234064908" y="1055.0" />
+              <point x="0.0" y="17.5" />
+            </edge>
+            <edge source="platform.plate.Plate" target="utils.COORD">
+              <point x="-45.46875" y="-17.5" />
+              <point x="494.1786825039354" y="1395.0" />
+              <point x="0.0" y="1395.0" />
+              <point x="0.0" y="55.0" />
+              <point x="133.1034635120884" y="55.0" />
+              <point x="-43.5" y="17.5" />
+            </edge>
+            <edge source="platform.plate.Plate" target="platform.plate.PlateLayoutManipModule">
+              <point x="-39.40625" y="-17.5" />
+              <point x="500.2411825039354" y="1385.0" />
+              <point x="90.83073623936139" y="1385.0" />
+              <point x="90.83073623936139" y="870.0" />
+              <point x="290.4130295913717" y="870.0" />
+              <point x="290.4130295913717" y="570.0" />
+              <point x="256.17300068575355" y="570.0" />
+              <point x="0.0" y="17.5" />
+            </edge>
+            <edge source="utils.sorter" target="character">
+              <point x="55.875" y="17.5" />
+              <point x="1675.9775588121513" y="560.0" />
+              <point x="1803.030841281378" y="560.0" />
+              <point x="-49.428571428571445" y="-17.5" />
+            </edge>
+            <edge source="platform.plate.PlateMapModule_Background" target="utils.factory.PositionBKFactory">
+              <point x="-52.6875" y="-17.5" />
+              <point x="2197.7147045389192" y="1170.0" />
+              <point x="1979.4230378722523" y="1170.0" />
+              <point x="0.0" y="17.5" />
+            </edge>
+            <edge source="utils.factory.PositionBKFactory" target="utils.position">
+              <point x="-16.08333333333337" y="-17.5" />
+              <point x="1963.339704538919" y="1025.0" />
+              <point x="1827.9445234064908" y="1025.0" />
+              <point x="1827.9445234064908" y="900.0" />
+              <point x="1173.2147045389192" y="900.0" />
+              <point x="61.875" y="17.5" />
+            </edge>
+            <edge source="Narrator" target="platform.plate.PlateSettings">
+              <point x="-42.28125" y="-17.5" />
+              <point x="2096.768533216948" y="1530.0" />
+              <point x="233.08073623936139" y="1530.0" />
+              <point x="233.08073623936139" y="1200.0" />
+              <point x="238.41451514497953" y="1200.0" />
+              <point x="-58.875" y="17.5" />
+            </edge>
+            <edge source="utils.factory.PositionBKFactory" target="Exceptions.position.BackgroundIncompatibleException">
+              <point x="80.41666666666663" y="-17.5" />
+              <point x="2059.8397045389192" y="1085.0" />
+              <point x="2775.402817284017" y="1085.0" />
+              <point x="-105.33333333333333" y="17.5" />
+            </edge>
+            <edge source="platform.plate.Plate" target="character">
+              <point x="27.28125" y="-17.5" />
+              <point x="566.9286825039354" y="1365.0" />
+              <point x="1417.3935332169478" y="1365.0" />
+              <point x="1417.3935332169478" y="1075.0" />
+              <point x="1849.0070234064908" y="1075.0" />
+              <point x="1849.0070234064908" y="715.0" />
+              <point x="1868.1866854372222" y="715.0" />
+              <point x="15.727272727272748" y="17.5" />
+            </edge>
+            <edge source="utils.layout" target="platform.PlatformMapModule">
+              <point x="-17.64705882352939" y="17.5" />
+              <point x="1061.7808810095075" y="445.0" />
+              <point x="800.1435332169478" y="445.0" />
+              <point x="800.1435332169478" y="940.0" />
+              <point x="821.2685332169478" y="940.0" />
+              <point x="26.625" y="-17.5" />
+            </edge>
+            <edge source="utils.layout" target="utils.layout">
+              <point x="-70.58823529411768" y="17.5" />
+              <point x="1008.8397045389191" y="365.0" />
+              <point x="984.4279398330368" y="365.0" />
+              <point x="984.4279398330368" y="327.5" />
+              <point x="-75.0" y="-0.0" />
+            </edge>
+            <edge source="utils.factory.PositionBKFactory" target="Exceptions.position.CoordinateIncompatibleException">
+              <point x="-48.25" y="-17.5" />
+              <point x="1931.1730378722523" y="1035.0" />
+              <point x="1739.6945234064908" y="1035.0" />
+              <point x="77.75" y="17.5" />
+            </edge>
+            <edge source="Narrator" target="utils.factory.PlateMapBKModules">
+              <point x="19.21875" y="-17.5" />
+              <point x="2158.268533216948" y="1500.0" />
+              <point x="2565.5688712055858" y="1500.0" />
+              <point x="0.0" y="17.5" />
+            </edge>
+            <edge source="Narrator" target="platform.plate.PlateMapModule_Background">
+              <point x="11.53125" y="-17.5" />
+              <point x="2150.581033216948" y="1490.0" />
+              <point x="2215.2772045389192" y="1490.0" />
+              <point x="-35.125" y="17.5" />
+            </edge>
+            <edge source="utils.position" target="utils.coordinate">
+              <point x="-75.625" y="-17.5" />
+              <point x="1035.7147045389192" y="765.0" />
+              <point x="556.0252734130263" y="765.0" />
+              <point x="556.0252734130263" y="280.0" />
+              <point x="606.2838333267978" y="280.0" />
+              <point x="21.022727272727252" y="17.5" />
+            </edge>
+            <edge source="utils.factory.PlateMapBKModules" target="Exceptions.plate.MapExpansionFailure">
+              <point x="0.0" y="-17.5" />
+              <point x="2565.5688712055858" y="1275.0" />
+              <point x="2518.4022045389192" y="1275.0" />
+              <point x="0.0" y="17.5" />
+            </edge>
+            <edge source="platform.plate.PlateLayoutManipModule" target="utils.layout">
+              <point x="103.75" y="-17.5" />
+              <point x="359.92300068575355" y="405.0" />
+              <point x="1026.4867633624485" y="405.0" />
+              <point x="-52.94117647058823" y="17.5" />
+            </edge>
+            <edge source="platform.plate.PlateMapModule_Background" target="utils.coordinate">
+              <point x="122.93749999999989" y="-17.5" />
+              <point x="2373.3397045389192" y="1200.0" />
+              <point x="3087.332741526441" y="1200.0" />
+              <point x="3087.332741526441" y="240.0" />
+              <point x="665.1474696904341" y="240.0" />
+              <point x="79.88636363636363" y="17.5" />
+            </edge>
+            <edge source="Narrator" target="Exceptions.plate.MapExpansionFailure">
+              <point x="26.90625" y="-17.5" />
+              <point x="2165.956033216948" y="1510.0" />
+              <point x="2682.5688712055858" y="1510.0" />
+              <point x="2682.5688712055858" y="1355.0" />
+              <point x="2590.0688712055858" y="1355.0" />
+              <point x="71.66666666666674" y="17.5" />
+            </edge>
+            <edge source="utils.factory.PlateMapBKModules" target="utils.layout">
+              <point x="47.33333333333326" y="-17.5" />
+              <point x="2612.9022045389192" y="1375.0" />
+              <point x="2712.2361506173506" y="1375.0" />
+              <point x="2712.2361506173506" y="405.0" />
+              <point x="1132.369116303625" y="405.0" />
+              <point x="52.94117647058829" y="17.5" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="0.4771929824561403" x="1508.0" y="886.0" />
+          <SelectedNodes />
+          <Categories />
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/utils/factory/PlateMapBKModules.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="6" column="79" lean-forward="false" selection-start-line="6" selection-start-column="79" selection-end-line="6" selection-end-column="79" />
+        <state relative-caret-position="525">
+          <caret line="33" column="151" lean-forward="false" selection-start-line="33" selection-start-column="4" selection-end-line="33" selection-end-column="151" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/platform/plate/Plate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="441">
+          <caret line="51" column="4" lean-forward="true" selection-start-line="51" selection-start-column="4" selection-end-line="52" selection-end-column="94" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/utils/factory/MFactory.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Narrator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="33" column="5" lean-forward="false" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/character/villain/Serpent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="780">
+          <caret line="74" column="0" lean-forward="false" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/platform/plate/PlateMapModule_Background.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
-          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -947,71 +1539,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/platform/plate/PlateMapModule.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
-          <caret line="86" column="49" lean-forward="false" selection-start-line="86" selection-start-column="49" selection-end-line="86" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/platform/plate/PlateMapModule_Background.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/utils/factory/PlateMapModules.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/utils/factory/PlateMapBKModules.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="546">
-          <caret line="26" column="20" lean-forward="false" selection-start-line="26" selection-start-column="20" selection-end-line="26" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/character/Representative.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/utils/factory/PFactory.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="84">
-          <caret line="6" column="17" lean-forward="false" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="7" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/character/villain/Serpent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1281">
-          <caret line="74" column="0" lean-forward="true" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/platform/plate/Plate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="69" column="8" lean-forward="true" selection-start-line="69" selection-start-column="8" selection-end-line="112" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Narrator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="33" column="5" lean-forward="true" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
-          <folding />
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="840">
+            <caret line="40" column="5" lean-forward="false" selection-start-line="40" selection-start-column="5" selection-end-line="40" selection-end-column="5" />
+            <folding />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
