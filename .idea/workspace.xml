@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a3930087-2982-446a-8260-e7d8618a53c0" name="Default" comment="Narrator">
+    <list default="true" id="a3930087-2982-446a-8260-e7d8618a53c0" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -421,7 +420,7 @@
       <workItem from="1512834928806" duration="482000" />
       <workItem from="1512886191721" duration="4741000" />
       <workItem from="1512966675487" duration="738000" />
-      <workItem from="1512996068689" duration="2614000" />
+      <workItem from="1512996068689" duration="2629000" />
     </task>
     <task id="LOCAL-00001" summary="With Background">
       <created>1512834972099</created>
@@ -444,11 +443,18 @@
       <option name="project" value="LOCAL" />
       <updated>1512890347989</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Narrator and README">
+      <created>1512998890330</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1512998890330</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18654000" />
+    <option name="totallyTimeSpent" value="18669000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -528,7 +534,8 @@
     <MESSAGE value="With Background" />
     <MESSAGE value="update readme" />
     <MESSAGE value="Narrator" />
-    <option name="LAST_COMMIT_MESSAGE" value="Narrator" />
+    <MESSAGE value="Narrator and README" />
+    <option name="LAST_COMMIT_MESSAGE" value="Narrator and README" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -579,6 +586,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -586,6 +594,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
