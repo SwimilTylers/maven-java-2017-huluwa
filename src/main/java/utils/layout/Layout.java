@@ -24,6 +24,7 @@ public class Layout {
         length = nodes.length;
     }
 
+    @Deprecated
     public BasePosition[] getOccupiedNodes(){
         int sizeShouldBe = 0;
         BasePosition[] notes = new BasePosition[length];
@@ -40,6 +41,7 @@ public class Layout {
         return ret;
     }
 
+    @Deprecated
     public boolean isAvailable(){
         for (BasePosition i:nodes
              ) {
@@ -49,6 +51,7 @@ public class Layout {
         return false;
     }
 
+    @Deprecated
     public int getVacantNumber(){
         int sum = 0;
         for (BasePosition i:nodes
@@ -86,14 +89,37 @@ public class Layout {
             new _2Coordinate(10,8), new _2Coordinate(11,5), new _2Coordinate(11,9),
             new _2Coordinate(12,6), new _2Coordinate(12,8), new _2Coordinate(13,7)};
 
+    @Deprecated
     public BasePosition FindVacantPlace(){
         if(!isAvailable())   return null;
         while (true){
             int favor = new Random().nextInt(length);
-            if(!nodes[favor].isOccupied()){
+            if (!nodes[favor].isOccupied()) {
                 return nodes[favor];
             }
         }
+    }
+
+    Boolean isFindVacantPlaceAccomplished = true;
+
+    public BasePosition askForVacant() throws InterruptedException {
+        for (BasePosition place:nodes
+             ) {
+            if (!place.isOccupied()){
+                while (!isFindVacantPlaceAccomplished)
+                    isFindVacantPlaceAccomplished.wait();
+                if (!place.isOccupied()){
+                    isFindVacantPlaceAccomplished = false;
+                    return place;
+                }
+            }
+        }
+        return null;
+    }
+
+    public synchronized void FindVacantAccomplished(){
+        isFindVacantPlaceAccomplished = true;
+        isFindVacantPlaceAccomplished.notify();
     }
 
     public BasePosition FindHead(){

@@ -12,54 +12,66 @@ abstract public class Beings {
 //    private ArrayList<Beings> Friends;
 
     public Beings(_2Coordinate birthplace){
-        ChangeBirthplace(birthplace);
+        this.birthplace = birthplace;
     }
 
     final public void ChangeBirthplace(_2Coordinate wt){
-        birthplace = wt;
+        synchronized (this) {
+            birthplace = wt;
+        }
     }
 
     final public _2Coordinate TellMyBirthplace(){
-        return birthplace;
+        synchronized (this) {
+            return birthplace;
+        }
     }
 
     final public boolean Birth(BasePosition p_birthplace){
-        if(p_birthplace.isOccupied())   return false;
-        JumpTO(p_birthplace);
-        return true;
+        synchronized (this) {
+            if (p_birthplace.isOccupied()) return false;
+            JumpTO(p_birthplace);
+            return true;
+        }
     }
 
     final public BasePosition TellBasePosition(){
-        return where;
+        synchronized (this) {
+            return where;
+        }
     }
 
     final public void JumpTO(BasePosition toBasePosition){
-        if(toBasePosition == null)  throw null;
-        if(where == toBasePosition) return;
-        if(toBasePosition.isOccupied()) {
-            AfterMeetingBeings();
-            return;
-        }
-        if(where != null) {
-            if (where.ConsistencyCheck(this)) {
-                JumpOut();
+        synchronized (this) {
+            if (toBasePosition == null) throw null;
+            if (where == toBasePosition) return;
+            if (toBasePosition.isOccupied()) {
+                AfterMeetingBeings();
+                return;
             }
-            else
-                throw null;
+            if (where != null) {
+                if (where.ConsistencyCheck(this)) {
+                    JumpOut();
+                } else
+                    throw null;
+            }
+            toBasePosition.checkin(this);
+            where = toBasePosition;
         }
-        toBasePosition.checkin(this);
-        where = toBasePosition;
     }
 
-    final public BasePosition JumpOut(){
-        BasePosition fromBasePosition = where;
-        if(where != null) {
-            if (!where.ConsistencyCheck(this)) throw null;
-            where.checkout();
-            where = null;
+    final public synchronized BasePosition JumpOut(){
+        synchronized (this) {
+            BasePosition fromBasePosition = where;
+            if (where != null) {
+                if (!where.ConsistencyCheck(this)) throw null;
+                where.checkout();
+                where = null;
+            }
+            return fromBasePosition;
         }
-        return fromBasePosition;
     }
+
 
     final static public void ExchangeOurPosition(Beings a, Beings b){
         BasePosition temp = b.JumpOut();
@@ -76,12 +88,13 @@ abstract public class Beings {
     }
 
     public boolean FindMyPlaceInLayout(Layout layout){
-        if(layout == null)  return false;
+        if (layout == null) return false;
         BasePosition selected = layout.FindVacantPlace();
-        if(selected == null)    return false;
-        JumpOut();
-        JumpTO(selected);
-        return true;
+        if (selected == null) return false;
+        synchronized (this) {
+            JumpOut();
+            JumpTO(selected);
+            return true;
 
         /*
         if(!layout.isAvailable())   return false;
@@ -94,6 +107,7 @@ abstract public class Beings {
             }
         }
         */
+        }
     }
 
 /*
