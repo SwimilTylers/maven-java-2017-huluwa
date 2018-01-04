@@ -18,27 +18,27 @@ public class PlateLayoutManipModule implements LayoutManip {
         size[COORD.Y.d()] = YNum;
     }
 
-    @Override
+
     public Layout CentroSymmetry(Layout orig){
         return null;
     }
 
-    @Override
+
     public Layout InversionSymmetry(Layout orig){
         return null;
     }
 
-    @Override
+
     public Layout ReversionSymmetry(Layout orig){
         return null;
     }
 
-    @Override
+
     public Layout Combination(Layout... origs){
         return null;
     }
 
-    @Override
+
     public Layout Intersection(Layout... origs){
         return null;
     }

@@ -1,8 +1,12 @@
 package character.hero;
 
+import Exceptions.character.FriendFireException;
 import character.Beings;
 import character.Representative;
 import character.hero.Huluwas.*;
+import character.villain.Serpent;
+import character.villain.Subs.Minion;
+import character.villain.Subs.Scorpion;
 import utils.FOREGROUNDS;
 import utils.coordinate._2Coordinate;
 import utils.layout.Layout;
@@ -29,6 +33,13 @@ public class Grandpa extends Beings implements Representative {
         DUPLICATED_LOCK = true;
     }
 
+    @Override
+    public boolean WinOrNot(Beings enemy) throws FriendFireException {
+        if(enemy instanceof Grandpa || enemy instanceof Huluwa)
+            throw new FriendFireException(enemy);
+        return false;
+    }
+
 
     public void DefaultConstituents(LayoutBrief init){
         SetLayout(init);
@@ -49,6 +60,7 @@ public class Grandpa extends Beings implements Representative {
         }
     */
 
+    @Deprecated
     public void RangeConstituents(LayoutBrief layout){
         SetLayout(layout);
         for (Huluwa baby:Huluwas
@@ -59,11 +71,13 @@ public class Grandpa extends Beings implements Representative {
     }
 
 
+    @Deprecated
     public void SortConstituents(Sorter sorter, ComparingInterface cmpInterface){
         sorter.Sort(CurrentLayout, cmpInterface);
     }
 
 
+    @Deprecated
     public Beings Hail(String name){
         if(name == this.TellMyName())
             return this;

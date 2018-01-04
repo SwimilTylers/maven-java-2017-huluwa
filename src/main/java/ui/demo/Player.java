@@ -1,4 +1,4 @@
-package ui;
+package ui.demo;
 
 import java.awt.Image;
 import java.net.URL;

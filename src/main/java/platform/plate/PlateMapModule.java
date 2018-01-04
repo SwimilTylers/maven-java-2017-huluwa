@@ -1,6 +1,7 @@
 package platform.plate;
 
 import Exceptions.plate.MapExpansionFailure;
+import Exceptions.plate.OutOfBorderException;
 import platform.PlatformMapModule;
 import utils.COORD;
 import utils.coordinate.Coordinate;
@@ -52,7 +53,18 @@ public class PlateMapModule implements PlatformMapModule {
     }
 
 
+    public Position LocationWithBorderTest(Coordinate _coord) throws OutOfBorderException{
+        if(_coord.dimension != 2)    throw null;
+        _2Coordinate coord = (_2Coordinate)_coord;
+        int[] idx = {0, 0};
+        idx[0] = (int)((coord.Y() - start.Y())/granularity.Y());
+        idx[1] = (int)((coord.X() - start.X())/granularity.X());
 
+        if(idx[0] < 0 || idx[0] >= size[COORD.Y.d()]
+                || idx[1] < 0 || idx[1] >= size[COORD.X.d()])
+            throw new OutOfBorderException();
+        return Map[idx[0]][idx[1]];
+    }
 
     public Position Location(Coordinate _coord){
         if(_coord.dimension != 2)    throw null;

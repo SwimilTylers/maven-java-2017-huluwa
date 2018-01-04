@@ -1,7 +1,10 @@
 package character.villain;
 
+import Exceptions.character.FriendFireException;
 import character.Beings;
 import character.Representative;
+import character.hero.Grandpa;
+import character.hero.Huluwa;
 import character.villain.Subs.Minion;
 import character.villain.Subs.Scorpion;
 import utils.FOREGROUNDS;
@@ -29,6 +32,20 @@ public class Serpent extends Beings implements Representative {
 
     public int getSoldierUnderCommand() {
         return SoldierUnderCommand;
+    }
+
+    @Override
+    public boolean WinOrNot(Beings enemy) throws FriendFireException {
+        if(enemy instanceof Minion || enemy instanceof Scorpion || enemy instanceof Serpent)
+            throw new FriendFireException(enemy);
+        if (enemy instanceof Grandpa)
+            return true;
+        else if(enemy instanceof Huluwa){
+            int win = new java.util.Random().nextInt(100);
+            if(win > 80)    return false;
+            return true;
+        }
+        return true;
     }
 
 

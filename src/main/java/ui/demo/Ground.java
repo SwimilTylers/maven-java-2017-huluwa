@@ -1,4 +1,4 @@
-package ui;
+package ui.demo;
 
 import javax.swing.JFrame;
 

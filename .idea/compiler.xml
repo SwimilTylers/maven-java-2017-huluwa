@@ -10,7 +10,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="maven-java-2017-huluwa" target="1.5" />
+      <module name="maven-java-2017-huluwa" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

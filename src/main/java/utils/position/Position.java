@@ -13,6 +13,7 @@ public class Position extends BasePosition {
         coord = new _2Coordinate(x,y);
     }
 
+    @Deprecated
     public String visualize(){
         if(content == null)
             return "{empty} ";

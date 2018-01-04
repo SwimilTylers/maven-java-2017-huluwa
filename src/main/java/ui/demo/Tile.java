@@ -1,4 +1,6 @@
-package ui;
+package ui.demo;
+
+import ui.demo.Thing2D;
 
 import java.awt.Image;
 import java.net.URL;

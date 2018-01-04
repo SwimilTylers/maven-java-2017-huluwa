@@ -1,6 +1,11 @@
 package character.hero;
 
+import Exceptions.character.FriendFireException;
+import character.Beings;
 import character.Subordinate;
+import character.villain.Serpent;
+import character.villain.Subs.Minion;
+import character.villain.Subs.Scorpion;
 import utils.FOREGROUNDS;
 import utils.HLW_COLOR;
 import utils.HLW_SENIORITY;
@@ -17,6 +22,28 @@ abstract public class Huluwa extends Subordinate{
         super(birthplace);
         super.ChangeVisual(FOREGROUNDS.Young);
         TotalBrother++;
+    }
+
+    @Override
+    public boolean WinOrNot(Beings enemy) throws FriendFireException {
+        if(enemy instanceof Huluwa || enemy instanceof Grandpa)
+            throw new FriendFireException(enemy);
+        if (enemy instanceof Serpent) {
+            int win = new java.util.Random().nextInt(100);
+            if(win > 35)    return false;
+            return true;
+        }
+        else if(enemy instanceof Scorpion){
+            int win = new java.util.Random().nextInt(100);
+            if(win > 50)    return false;
+            return true;
+        }
+        else if(enemy instanceof Minion){
+            int win = new java.util.Random().nextInt(100);
+            if(win > 90)    return false;
+            return true;
+        }
+        return true;
     }
 /*
     public Huluwa(_2Coordinate birthplace, Huluwa you){

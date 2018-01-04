@@ -1,5 +1,6 @@
 package character;
 
+import Exceptions.character.FriendFireException;
 import utils.FOREGROUNDS;
 import utils.coordinate._2Coordinate;
 import utils.layout.Layout;
@@ -10,15 +11,15 @@ abstract public class Beings {
     private _2Coordinate birthplace;
     private FOREGROUNDS visualization = FOREGROUNDS.Folk;
 //    private ArrayList<Beings> Friends;
+    Boolean isAlive = true;
+
 
     public Beings(_2Coordinate birthplace){
         this.birthplace = birthplace;
     }
 
     final public void ChangeBirthplace(_2Coordinate wt){
-        synchronized (this) {
-            birthplace = wt;
-        }
+        birthplace = wt;
     }
 
     final public _2Coordinate TellMyBirthplace(){
@@ -36,43 +37,77 @@ abstract public class Beings {
     }
 
     final public BasePosition TellBasePosition(){
-        synchronized (this) {
-            return where;
-        }
+        return where;
     }
 
     final public void JumpTO(BasePosition toBasePosition){
-        synchronized (this) {
-            if (toBasePosition == null) throw null;
-            if (where == toBasePosition) return;
-            if (toBasePosition.isOccupied()) {
-                AfterMeetingBeings();
-                return;
-            }
-            if (where != null) {
-                if (where.ConsistencyCheck(this)) {
-                    JumpOut();
-                } else
-                    throw null;
-            }
-            toBasePosition.checkin(this);
-            where = toBasePosition;
+        if (toBasePosition == null) throw null;
+        if (where == toBasePosition) return;
+        if (where != null) {
+            if (where.ConsistencyCheck(this)) {
+                JumpOut();
+            } else
+                throw null;
         }
-    }
-
-    final public synchronized BasePosition JumpOut(){
-        synchronized (this) {
-            BasePosition fromBasePosition = where;
-            if (where != null) {
-                if (!where.ConsistencyCheck(this)) throw null;
-                where.checkout();
+        synchronized (isAlive) {
+            if(isAlive == false)    return;
+            boolean result = toBasePosition.checkin(this);
+            if (result)
+                where = toBasePosition;
+            else {
+                isAlive = false;
                 where = null;
             }
-            return fromBasePosition;
         }
     }
 
+    final public void JumpTOAndChallenge(BasePosition toBasePosition) throws FriendFireException {
+        if (toBasePosition == null) throw null;
+        if (where == toBasePosition) return;
+        if (where != null) {
+            if (where.ConsistencyCheck(this)) {
+                JumpOut();
+            } else
+                throw null;
+        }
+        synchronized (isAlive) {
+            if(isAlive == false)    return;
+            boolean result = toBasePosition.checkinAndChallenge(this);
+            if (result)
+                where = toBasePosition;
+            else {
+                isAlive = false;
+                where = null;
+            }
+        }
+    }
 
+    final public BasePosition JumpOut(){
+        BasePosition fromBasePosition = where;
+        if (where != null) {
+            if (!where.ConsistencyCheck(this)) throw null;
+            where.checkout();
+            where = null;
+        }
+        return fromBasePosition;
+    }
+
+    final public void makeDead(){
+        synchronized (isAlive) {
+            isAlive = false;
+        }
+    }
+
+    final public Boolean whetherAlive(){
+        synchronized (isAlive) {
+            return isAlive;
+        }
+
+    }
+
+    abstract public boolean WinOrNot(Beings enemy) throws FriendFireException;
+
+    @Deprecated
     final static public void ExchangeOurPosition(Beings a, Beings b){
         BasePosition temp = b.JumpOut();
         b.JumpTO(a.JumpOut());
@@ -87,27 +122,14 @@ abstract public class Beings {
         return visualization.getName();
     }
 
+    @Deprecated
     public boolean FindMyPlaceInLayout(Layout layout){
         if (layout == null) return false;
         BasePosition selected = layout.FindVacantPlace();
         if (selected == null) return false;
-        synchronized (this) {
-            JumpOut();
-            JumpTO(selected);
-            return true;
-
-        /*
-        if(!layout.isAvailable())   return false;
-        while (true){
-            int favor = new Random().nextInt(layout.length);
-            if(!layout.nodes[favor].isOccupied()){
-                JumpOut();
-                JumpTO(layout.nodes[favor]);
-                return true;
-            }
-        }
-        */
-        }
+        JumpOut();
+        JumpTO(selected);
+        return true;
     }
 
 /*
