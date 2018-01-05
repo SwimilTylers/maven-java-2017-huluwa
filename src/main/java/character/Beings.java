@@ -61,20 +61,29 @@ abstract public class Beings {
         }
     }
 
+    final public void Challenge(BasePosition toBasePosition) throws FriendFireException {
+        if (toBasePosition == null) throw null;
+        if (where == toBasePosition) return;
+        synchronized (isAlive) {
+            if(isAlive == false)    return;
+            boolean result = toBasePosition.challenge(this);
+            if(!result) {
+                isAlive = false;
+                where = null;
+            }
+        }
+    }
+
     final public void JumpTOAndChallenge(BasePosition toBasePosition) throws FriendFireException {
         if (toBasePosition == null) throw null;
         if (where == toBasePosition) return;
-        if (where != null) {
-            if (where.ConsistencyCheck(this)) {
-                JumpOut();
-            } else
-                throw null;
-        }
         synchronized (isAlive) {
             if(isAlive == false)    return;
             boolean result = toBasePosition.checkinAndChallenge(this);
-            if (result)
+            if (result){
+                JumpOut();
                 where = toBasePosition;
+            }
             else {
                 isAlive = false;
                 where = null;
@@ -85,8 +94,8 @@ abstract public class Beings {
     final public BasePosition JumpOut(){
         BasePosition fromBasePosition = where;
         if (where != null) {
-            if (!where.ConsistencyCheck(this)) throw null;
-            where.checkout();
+            if (where.ConsistencyCheck(this))
+                where.checkout();
             where = null;
         }
         return fromBasePosition;

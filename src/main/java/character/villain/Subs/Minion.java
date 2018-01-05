@@ -55,7 +55,7 @@ public class Minion extends Subordinate {
             return true;
         else if(enemy instanceof Huluwa){
             int win = new java.util.Random().nextInt(100);
-            if(win > 20)    return false;
+            if(win > 35)    return false;
             return true;
         }
         return true;

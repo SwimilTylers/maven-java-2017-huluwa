@@ -10,7 +10,8 @@ public class ThisWorld extends JFrame{
     }
 
     public void InitUI() {
-        Battlefield battlefield = new Battlefield(40,30,30);
+//        Battlefield battlefield = new Battlefield(50,32,16, 0, 0);
+        Battlefield battlefield = new Battlefield(50,29,13,50*3,50*3);
         add(battlefield);
 
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -18,11 +19,5 @@ public class ThisWorld extends JFrame{
                 battlefield.getBoardHeight() + 2 * OFFSET);
         setLocationRelativeTo(null);
         setTitle("Huluwas");
-    }
-
-
-    public static void main(String[] args) {
-        ThisWorld ground = new ThisWorld();
-        ground.setVisible(true);
     }
 }

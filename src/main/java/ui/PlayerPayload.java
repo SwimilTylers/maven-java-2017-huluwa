@@ -3,6 +3,7 @@ package ui;
 import Exceptions.character.FriendFireException;
 import Exceptions.plate.OutOfBorderException;
 import character.Beings;
+import character.hero.Grandpa;
 import character.hero.Huluwa;
 import character.villain.Subs.Minion;
 import platform.plate.PlateMapModule;
@@ -19,6 +20,8 @@ public class PlayerPayload extends Thing2D implements Runnable{
     protected final Battlefield field;
     protected RelativeMove move;
 
+    protected final String imgRsr, fireRsr, deadRsr;
+
     protected final Image deadImage;
     protected final Image fightImage;
     protected boolean isFired = false;
@@ -26,6 +29,10 @@ public class PlayerPayload extends Thing2D implements Runnable{
     public PlayerPayload(Beings player, PlateMapModule world, Battlefield field, String imageResource, String imageDeadResource,
                          RelativeMove relativeMove) {
         super(((int) player.TellMyBirthplace().X()), ((int) player.TellMyBirthplace().Y()));
+
+        imgRsr = imageResource;
+        deadRsr = imageDeadResource;
+        fireRsr = "Boom.png";
 
         URL loc = this.getClass().getClassLoader().getResource(imageResource);
         ImageIcon iia = new ImageIcon(loc);
@@ -36,7 +43,7 @@ public class PlayerPayload extends Thing2D implements Runnable{
         ImageIcon deadIia = new ImageIcon(deadLoc);
         deadImage = deadIia.getImage();
 
-        URL fireLoc = this.getClass().getClassLoader().getResource("tile.png");
+        URL fireLoc = this.getClass().getClassLoader().getResource(fireRsr);
         ImageIcon fireIia = new ImageIcon(fireLoc);
         fightImage = fireIia.getImage();
 
@@ -48,26 +55,55 @@ public class PlayerPayload extends Thing2D implements Runnable{
         move = relativeMove;
     }
 
+    public PayloadShot shot(){
+        synchronized (this) {
+            if (player.whetherAlive())
+                return new PayloadShot(super.x(), super.y(), imgRsr);
+            else if(!isFired)
+                return new PayloadShot(super.x(),super.y(), fireRsr);
+            else
+                return new PayloadShot(super.x(),super.y(), deadRsr);
+        }
+    }
+
+    private synchronized void internal_challenge(double x, double y){
+        int[] change_x = new int[]{0,0,0,1,1,1,1,2,2,2,2,3,3,3,3};
+        int[] change_y = new int[]{1,2,3,0,1,2,3,0,1,2,3,0,1,2,3};
+        for (int i = 0; i < change_x.length; i++) {
+            if(!this.player.whetherAlive()) break;
+            try {
+                this.player.Challenge(world.LocationWithBorderTest(new _2Coordinate(change_x[i] + x, change_y[i] + y)));
+            } catch (FriendFireException e) {
+            } catch (OutOfBorderException e) {
+            }
+        }
+
+    }
+
+    public boolean whetherAlive(){
+        return player.whetherAlive();
+    }
+
     public void run() {
         while (!Thread.interrupted()) {
             if (player.whetherAlive()){
                 _2Coordinate pos = ((_2Coordinate) this.player.TellBasePosition().getCoord());
 
+
+
                 _2Coordinate change = this.move.next();
+
+                internal_challenge(pos.X(),pos.Y());
 
                 try {
                     this.player.JumpTOAndChallenge(world.LocationWithBorderTest(new _2Coordinate(change.X() + pos.X(),
                             change.Y() + pos.Y())));
                 } catch (OutOfBorderException e) {
-                    try {
-                        this.player.JumpTOAndChallenge(world.Location(new _2Coordinate(pos.X(), pos.Y())));
-                    } catch (FriendFireException e1) {
-                        this.player.JumpTO(player.TellBasePosition());
-                    }
                     if(move == RelativeMove.toLeft) move = RelativeMove.toRight;
                     else if(move == RelativeMove.toRight) move = RelativeMove.toLeft;
+                    else if(move == RelativeMove.toLeftRandom) move = RelativeMove.toRightRandom;
+                    else if(move == RelativeMove.toRightRandom) move = RelativeMove.toLeftRandom;
                 } catch (FriendFireException e) {
-                    this.player.JumpTO(player.TellBasePosition());
                 }
 
                 if(player.whetherAlive()) {
@@ -83,8 +119,8 @@ public class PlayerPayload extends Thing2D implements Runnable{
                     }
                     try {
 
-                        Thread.sleep(new java.util.Random().nextInt(200) + 100);
-                        this.field.repaint();
+                        Thread.sleep(new java.util.Random().nextInt(200) + 200);
+                        //this.field.repaint();
 
                     } catch (Exception e) {
 
@@ -96,8 +132,8 @@ public class PlayerPayload extends Thing2D implements Runnable{
                     this.setImage(deadImage);
                     try {
 
-                        Thread.sleep(new java.util.Random().nextInt(200) + 100);
-                        this.field.repaint();
+                        Thread.sleep(1000);
+                        //this.field.repaint();
 
                     } catch (Exception e) {
 
@@ -106,9 +142,12 @@ public class PlayerPayload extends Thing2D implements Runnable{
                 else{
                     this.setImage(fightImage);
                     try {
-
-                        Thread.sleep(new java.util.Random().nextInt(200) + 100);
-                        this.field.repaint();
+                        if(player instanceof Grandpa || player instanceof Huluwa)
+                            field.minusGood(this);
+                        else
+                            field.minusBad(this);
+                        Thread.sleep(new java.util.Random().nextInt(200) + 200);
+                        //this.field.repaint();
 
                     } catch (Exception e) {
 
@@ -126,22 +165,24 @@ public class PlayerPayload extends Thing2D implements Runnable{
         RelativeMove still = ()->new _2Coordinate(0,0);
         RelativeMove toRight = ()->new _2Coordinate(new java.util.Random().nextInt(2),0);
         RelativeMove toLeft = ()->new _2Coordinate(-(new java.util.Random().nextInt(2)),0);
-        RelativeMove Random = ()->new _2Coordinate(2-(new java.util.Random().nextInt(4)), 2-(new java.util.Random().nextInt(4)));
+        RelativeMove Random = ()->new _2Coordinate(2-(new java.util.Random().nextInt(5)), 1-(new java.util.Random().nextInt(3)));
+        RelativeMove toLeftRandom = ()->new _2Coordinate(1-(new java.util.Random().nextInt(5)), 1-(new java.util.Random().nextInt(3)));
+        RelativeMove toRightRandom = ()->new _2Coordinate((new java.util.Random().nextInt(5))-1, 1-(new java.util.Random().nextInt(3)));
     }
 }
 
 class MinionPayload extends PlayerPayload{
     public MinionPayload(_2Coordinate coord, PlateMapModule MapModule, Battlefield battlefield){
         super(new Minion(coord), MapModule, battlefield,
-                "player.png", "tile.png", RelativeMove.Random);
+                "Toad.png", "DeadToad.png", RelativeMove.toLeftRandom);
         player.Birth(MapModule.Location(player.TellMyBirthplace()));
     }
 }
 
 class HuluwaPayload extends PlayerPayload{
-    public HuluwaPayload(Huluwa huluwa, PlateMapModule MapModule, Battlefield battlefield){
+    public HuluwaPayload(Huluwa huluwa, String image, PlateMapModule MapModule, Battlefield battlefield){
         super(huluwa, MapModule, battlefield,
-                "player.png", "tile.png", RelativeMove.Random);
+                image, "Rock.png", RelativeMove.toRightRandom);
         player.Birth(MapModule.Location(player.TellMyBirthplace()));
     }
 }
