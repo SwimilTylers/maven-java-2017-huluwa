@@ -1,164 +1,149 @@
-# Introduction
-This Project is constructed by _Swimiltylers_ (id: 151220145) per
-se. It is aimed at simulating the plots of cartoon _Huluwa_. The
-characters are: Huluwas, grandpa, minions, serpent and 
-scorpion. We will take a close look at its whole formation in this manual.
+葫芦娃大作业说明
+=====
+**151220145** **杨一江**
 
-The whole dependency structure of the project is illustrated [here](./UML/Project.png). 
-If you want display the demo, please run our __NEW__ descriptor `Narrator`, or ./platform/Plate.java in an old style.
+效果演示及说明
+-----
+游戏开始界面
 
-We have apply some __new__ __features__ to our project, which is highlighted 
-by __'*'__ after the title. If you want to view the history version, 
-please check Git history in my personal [Github repository](https://github.com/SwimilTylers/maven-java-2017-huluwa).
+![](Welcome%20Pic.jpg)
 
-## Background Emoji*
+空格键开始游戏，记录同时进行。葫芦娃阵营分布在左侧，呈一字长蛇阵。蛇精阵营由蛇精本人坐镇，蛤蟆精冲锋，
+呈横轭之阵，位于右侧
 
-At this revision, we apply emoji-based background instead of naive word implications.
-Meanwhile, it is noticeable that the characters have been equipped with emoji as well.
-In order to perform this new feature, we have derive an inherit class - `PlateMapModule_Background`, relative to 
-`PlateMapModule`, and `PositionWithBackground` to `Position`. _Trinity_ isolates PlateMapModule from Plate, which
-is facilitated from it when deploy our new MapModule mentioned above. The description of emoji lies in
-`enum BACKGROUDNS` and `enum FOREGROUNDS`. 
+![](Begin%20Pic.jpg)
 
-## Factory and decorator*
-We add factory in this revision. All the factory class locates in utils.factory. The implement of factory heads for the 
-problem which allows PlateMapModule to generate Map flexibly. Meanwhile, factory class `PlateMapModules` and its 
-derivative `PlateMapBKModules` integrate deployment and design of the Map formation.
+再按空格键进行战斗，当双方接触的时候，开始厮杀。爷爷总是打输，而葫芦娃对蛤蟆精保有优势，对蛇精就没有那么从容
+了
 
-    static public PlateMapModule_Background InitializeMapModule(PlateSettings Settings, Enum EnumOptions, ArrayList<Pair<BACKGROUNDS, Layout>> layouts);
+![](Fight%20Pic.png)
 
-Designing pattern decorator has been employed on `Plate`, as it is shown below
+直到一方全部死亡时游戏停止，出现结束页面
 
-    static public Plate CreateRealm(PlateSettings Settings, PlateMapModule MapModule, PlateLayoutManipModule LayoutModule, Beings... Characters);
+![](End%20Pic.png)
+
+刚刚战斗的画面会被记录在.rcd文件中
+
+![](Save%20Pic.png)
+
+当开始界面的时候选择L键回放，选择.rcd文件，就可以进行回放
+
+![](Choose%20Pic.png)
+
+代码说明
+-----
+**多线程**
+
+每个`Beings`都会伴随一个`PlayerPayload`作为线程运行的载体，当开始游戏的时候变相当于一个独立的个体，有着自己的判断能力
+和选择能力，除了坐标转换，所有的事情都有只能靠自己，而且`Position`本身设计上保持同类之间独立性，Position只知道自己的一亩三分地
+所有的多线程任务就可以简化为：一群人对一个位置的争夺和退出。考虑了这一点，下面的设计思想就会是：
+
+1. 每个Beings除了收到死亡信息，其他都是串行进行的，也就是说，虽然可能存在飞来横祸，但是在平常的生活和学习中，都是一件事情
+一件事情的做，因此每一步都有前后的顺序
+2. 每一个Beings的行为模式比较简单，带有固定方向偏向的随机走位，在`RelativeMove`中有对应的static实现
+3. 在判断isAlive的时候，加入synchronized锁，尽力减少synchronized对于并发的影响，也保证了isAlive的判断过程中
+不会出现还没有判断完就出现变化的特殊局面。
+
+对于Position来说，则是相似的，对于每一个method，运行的时候都会采用`synchronized(this){...}`来保证在同一时刻Position能进行
+的操作只有一种，这样就不会出现幽灵的情况。
+
+**存储和再现**
+
+本次实验采用固定帧率进行播放，为了防止帧率的不稳定导致频闪。控制播放帧率的是`SynchroShot`类，该类在每一次提醒显示的时候
+都会进行一次抓拍，存储在`Battlefield`下的
     
-The diversity of combination has warrant the fluidity of project structure.
-
-## Exceptions and Generic*
-
-    public interface PFactory<P extends Position> {
-        P NewPosition(Object... GeneralOptions) throws Exception;
-        P NewPosition(Enum EnumOptions, Object... GeneralOptions) throws Exception;
-    }
-
-## Maven it*
-The structure of this project has transformed into total new form.
-As you can see, that was maven. With the help of it, we can build
-our project automatically.
-
-## Trinity
-
-This time, we add a new feature in our project. In order to 
-follow the SOLID principle, we apply several modifications to our
- our object formation. The main work is to separate the 'huge'
- `Plate` object. In our new revision, the `Plate` is formed of 
-three different objects: `PlateLayoutManipModule`, `PlateMapModule`, 
-and modified `Plate`.  `PlateMapModule` is responsible for 
-Coordination-relates, while `PlateLayoutManipModule` for the transformation 
-of Layout. Our new `Plate` is now free from redundant functionality and 
-focuses on Character deployment. 
-
-![Trinity](./UML/Package%20plate.png)
-
-## Scepter
-
-Resemble to the above effort, we apply interface to standardize 
-the behavior of Superiors. Thus we employ `Representatives`. 
-With this interface, we want to decouple the application from 
-the concrete implementation of the lower layer.
-
-## World of hierarchy
-
->War is Peace. Freedom is Slavery. Ignorance is Strength.
-
-In the realm created in this project, there are three 
-main components: _character_, _platform_ and _utils_.
-It is clear that we can get Inheritance Structure in _character_
-as followed
-
-    Beings  -> Subordinate  -> Minion
-        |   -> Grandpa      |-> Scorpion
-        L   -> Serpent      L-> Huluwa  -> Dawa
-                                        |-> Erwa
-                                        ...
-                                        L-> Qiwa
- 
-Particular, in this revision, Grandpa creates, positions,
-and range Huluwas, which means it is prohibited to access
-or control Huluwas directly from the outside. Serpent to
-Scorpion and Minions resembles, though categorized as
-_villains_ rather than _heroes_.
-
-    public void Serpent::Recruit(LayoutBrief initLayout);
-    public void Serpent::DesignateTroops(LayoutBrief layout);
-
-For individuals, the action is activated by messages from
-outsider, for _grandpa_ or _serpent_, or their superior.
-The typical message chain is as followed:
+    private LinkedList<BattlefieldShot> shot_save = new LinkedList<>();
     
-    World -> superior -> subordinates -[feedback to Position]-> World
+在结束的时候，将其写入文件当中。每一次的快拍，都会使得`PlayerPayload`对当前的情况进行存储，存储的信息也只包括：显示图像和位置，不包括
+其他的信息，减少存储时候的开销，也减少快拍和真实播放产生的时间间隔，提高快拍的准确性。
 
-Their feedback functions directed on Position they stand on, all
-some similar way. We modify the method as close as natural
-interaction, which sometimes means it is distributed rather than
-global method.
+读取的时候，直接从文件中读取对象，然后Battlefield进入回放模式播放记录的内容。
+
+**代码的层次结构**
+
+`Main`,继承了JFrame的`ThisWorld`和继承了JPanel的`Battlefield`，他们主要就是负责对用户的响应和打印画面
+接下来的一层就是`PlayerPayload`，作为人物的个体。最底层就是原先的代码实现，用于控制人物的策略。
+
+在设计思路上，尽量地保持高低层之间的单向通信，这也是尽力实现DIP原则的体现。所以，本次实验，除了统计坏人好人数量之外，**不存在
+其他任何PlayerPayload实例，能够调用高层的对象**，引用余老师的话，就是
+
+>“Don’t call us, we’ll call you.”
+
+由于是多线程，并且**不存在全知全能者**每个生物体都要对自己的情况进行判断，相竞争的时候也是局部的事情，参与的对象只有
+两个Beings和一个Position，产生的结果对高层的影响只有好人/坏人计数。
+
+![](Re-use code.png)
+
+**类/对象之间的关系**
+
+本次大实验除了用户界面的部分，其他代码均是本学期累积下来的代码的复用。在本次实验中，为了提高线程安全降低工程的复杂度，仅仅采用
+部分的原先模块进行组装。由于之前设计的时候功能模块划分比较明确，所以就直接将部分相关的模块单独提出来（包括`_2Coordiante`、`Position`、
+`MapModule`和`Beings`等）进行多线程的改装（集中在`Beings`和`Position`），就能够完成本次实验的底层实现。本章节主要讲述在本次实验中
+复用的代码的组织形式，以及复用的方式。
+
+1. Composition
+
+    主要体现在框架代码对于原先代码的复用中：
+    + 原先在结构中以Composition的形式处于高层类（`Plate`和`Narrator`）中的`PlateMapModule`在本次实验中
+      依然以同样的方式处于高层`Battlefield`中，充当坐标转化的作用(`Coordinate`->`Position`)；
+    + 在`PlayerPayload`当中，`Beings`作为`protected final Beings player;`出现，搭载在其中。
+
+2. Generalization
+
+    **抽象**体现在将整体的架构划分为Beings，BasePosition和PlayerPayload上。除了PlayerPayload，
+    其他两个都是通过abstract class来实现的，相当于将角色确定下来，具体的人物性格，将会通过继承的方式实现，也就是说
+    在`Beings`上。`Beings`的功能就是描述一个生物体，作为一个abstract class，本身不能直接创建，即使已经
+    实现了大部分默认的规则，但是具体个体的行为判断（比如相遇时候的胜率判断）需要继承类来实现。当然，`Beings`及其子类中涉及到多线程的主要分布在`Beings`中
     
-    public boolean Being::FindMyPlaceInLayout(Layout layout)
+    **继承**相对比较繁琐，也主要体现在Beings及其子类上，可以通过下面的依赖图来查看Beings及其子类的部分关系
+    ![](Package character.png)
     
-Meanwhile, some character contains specific intra-class information.
-As for Huluwas, order of seniority is declared in _Huluwa_. Similar
-style of elaboration spread out the whole project, i.e. class _Plate_.
-
-    static final public ComparingInterface SenioritySorting_f2s = new SenioritySorting() {...};
-    abstract class SenioritySorting extends ComparingInterface {...}
+    **封装**一个体现在于Beings之间的对抗，由于整个工程并不存在一个全知全能者，所以不能通过一个独立的裁判来判断，而且这种方式也影响并发，所以
+    这里采用的是局部判断的策略，每一个Position封装一个Challenge的method，对于Beings来说，只要知道自己赢了还是输了，对于Position来说，Challenge
+    的集中实现能够允许Position进行并发程序时的critical section的访问控制，锁住发生冲突的双方，从而避免出现“A挑战B”同时“B挑战A”，也避免了带来的双方
+    皆阵亡的悖论。
     
-## Ship In A Bottle
+3. Association
 
->Ashes to Ashes, and Dust to Dust.
+    是对原先代码复用的另一种主要形式`PlateMapModule`作为坐标转换，被以联系的方式记录在`PlayerPayload`当中。由于`PlayerPayload`
+    是实现多线程的任务，所以`PlateMapModule`在多个`PlayerPayload`中，并且允许并发的访问。
+      
+      
+**OO程序设计原则和模式**
 
-In the _platform_ section, we create a background where 
-all characters communicate and interact. It is the base of
-actions. Therefore, when create a realm, we need to explicitly
-point out initCharacters and their coordinates, since 
-coordination is one of the principle attribute to those
-initCharacters.
+1. SOLID原则
 
-    Plate world = Plate.CreateRealm(PlateSettings.Regularized, grandpa, serpent);
+    在原先代码的过程中，使得之前的类中功能明确，在耦合性降低的同时，提高了类的复用。比如`PlateMapModule`类，在学习
+    SOLID原则（具体来说是**SRP单一职责原则**）之后由`Plate`类中分离开来，这个在之前版本README中的Trinity章节中有描述。根据功能的内聚性
+    分离出来的`PlateMapModule`功能明确为坐标的转换，从`Plate`中分离。
     
-NOTICE: for all _Beings_, you need to point out the birthplace
-when constructing one. In some rare scenarios, one _Being_
-can generated with _null_ birthplace, but it is an
-intermediate process within the procedure of particular
-ops.
-
-Constrained by the platform, any character, or even some
-utils, cannot get rid of the world they live in. _BasePosition_
-characters resides in, _Layout_ Sorter based on, _Coordinate_
-position possesses - all of them relate closely to the platform
-they live in.
-
-    public Layout::Layout(PlatformMapModule platform, Coordinate... obj);
+    在设计层次的时候，也考虑了DIP依赖倒置原则，高层提出需求，而低层尽量不打扰高层
     
+3. LoD原则
 
-## Between Cartesian Products
-
->Infinite Diversity in the infinite Combination.
-
-What means when we formulate our methods as a 'universe' one.
-In order to realize it, we plot a wide range of base-class.
-We can further this base-class to the specific class we need.
-At the same time, we use more some general media the modify
-the action of out method. Take Sorter as an example.
-
-    void Sorter::Sort(Layout array, ComparingInterface cmpInterface);
-
-_Layout_ is a sequence of BasePositions, which contains direction
-information. _ComparngInterface_ is a general comparing method, which
-determines the correlation of two variants. It is notable that
-_Sorter_ per se is an interface, and we can apply it to some
-specific methods.
+    每个对象都有自己私密的空间。即使是高层，也只能知道所需要的信息，不能对其他无关的参数进行访问。每个人能知道的东西是有限的，每一个个体只能知道
+    视野范围内的Position情况，也就说Beings对于周围空间的观察是一个相对坐标的查看
     
-    public class BubbleSort implements Sorter;
+2. decorator模式
+    在UI交互和文件的操作上，采用了decorator的模式来进行功能的扩展
     
-We can see similar methods throughout the whole project. Thus,
-assisted by the power of combination, we can display our
-simulation in diverse approaches.
+4. 状态模式
+   当对象的状态改变时，同时改变其行为。
+   如`Battlefield`共有5种状态，开始、战斗、回放和结束，根据状态改变绘图。
+    
+**其他**
+
+1. 注解
+    
+    在复用原先代码的时候，有些功能的实现并未考虑多线程情况，因此标注@Deprecated。@Override使用在重载函数上
+    
+2. 测试
+
+    包含了对`Beings`、`Position`和`PlateMapModule`的测试
+    
+**总结**
+
+本次实验综合运用了这个学期java所学的知识内容，感觉设计模式的学习可能对这个工程的框架把握能有更好的
+认识。其次，面向对象编程的原则能够节省一些人力的开销。在多线程方面，在测试方面比较困难，所以采用比较保守
+的方式进行控制。总之，在以后编程中，可能更加多地利用的是这学期java课所学到的设计思想以及一些原则。
+   

@@ -5,6 +5,7 @@ import utils.FOREGROUNDS;
 import utils.coordinate._2Coordinate;
 import utils.layout.Layout;
 import utils.position.BasePosition;
+import utils.position.Position;
 
 abstract public class Beings {
     private BasePosition where;
@@ -43,6 +44,7 @@ abstract public class Beings {
     final public void JumpTO(BasePosition toBasePosition){
         if (toBasePosition == null) throw null;
         if (where == toBasePosition) return;
+        BasePosition temp = where;
         if (where != null) {
             if (where.ConsistencyCheck(this)) {
                 JumpOut();
@@ -55,8 +57,11 @@ abstract public class Beings {
             if (result)
                 where = toBasePosition;
             else {
-                isAlive = false;
-                where = null;
+                result = temp.checkin(this);
+                if(result)
+                    where = temp;
+                else
+                    where = null;
             }
         }
     }
@@ -104,6 +109,7 @@ abstract public class Beings {
     final public void makeDead(){
         synchronized (isAlive) {
             isAlive = false;
+            where = null;
         }
     }
 

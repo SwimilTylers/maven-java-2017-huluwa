@@ -28,13 +28,14 @@ public class Battlefield extends JPanel{
     private final int Vertical_num;
 
     private Tile Background;
-    private Tile Win, Lose;
+    private Tile Win, Lose, Welcome;
     private ArrayList<PlayerPayload> players = new ArrayList<>();
     private HashSet<PlayerPayload> deadplayer = new HashSet<>();
 
     private final int width;
     private final int height;
     private boolean completed = false;
+    private boolean welcome = true;
 
     private final PlateMapModule MapModule;
 
@@ -117,23 +118,21 @@ public class Battlefield extends JPanel{
                 "Serpent.png", "DeadSerpent.png", PlayerPayload.RelativeMove.Random));
 
         // minion
+        players.add(new MinionPayload(new _2Coordinate(20,1), MapModule, this));
         players.add(new MinionPayload(new _2Coordinate(20,3), MapModule, this));
-        players.add(new MinionPayload(new _2Coordinate(20,4), MapModule, this));
         players.add(new MinionPayload(new _2Coordinate(20,5), MapModule, this));
-        players.add(new MinionPayload(new _2Coordinate(20,6), MapModule, this));
         players.add(new MinionPayload(new _2Coordinate(20,7), MapModule, this));
-        players.add(new MinionPayload(new _2Coordinate(20,8), MapModule, this));
         players.add(new MinionPayload(new _2Coordinate(20,9), MapModule, this));
 
-        players.add(new MinionPayload(new _2Coordinate(23,3), MapModule, this));
-        players.add(new MinionPayload(new _2Coordinate(23,4), MapModule, this));
-        players.add(new MinionPayload(new _2Coordinate(23,5), MapModule, this));
-        players.add(new MinionPayload(new _2Coordinate(23,6), MapModule, this));
-        players.add(new MinionPayload(new _2Coordinate(23,7), MapModule, this));
-        players.add(new MinionPayload(new _2Coordinate(23,8), MapModule, this));
-        players.add(new MinionPayload(new _2Coordinate(23,9), MapModule, this));
 
-        BadCount = 15;
+        players.add(new MinionPayload(new _2Coordinate(23,2), MapModule, this));
+        players.add(new MinionPayload(new _2Coordinate(23,4), MapModule, this));
+        players.add(new MinionPayload(new _2Coordinate(23,6), MapModule, this));
+        players.add(new MinionPayload(new _2Coordinate(23,8), MapModule, this));
+        players.add(new MinionPayload(new _2Coordinate(23,10), MapModule, this));
+
+
+        BadCount = 11;
 
     }
 
@@ -141,6 +140,7 @@ public class Battlefield extends JPanel{
         Background = new Tile(0,0);
         Win = new Tile(0,0,"Win.png");
         Lose = new Tile(0,0,"Lose.png");
+        Welcome = new Tile(0,0,"Welcome.png");
     }
 
     public final void initWorld() {
@@ -153,7 +153,10 @@ public class Battlefield extends JPanel{
         g.setColor(new Color(250, 240, 170));
         g.fillRect(0, 0, this.getWidth(), this.getHeight());
 
- //       world.addAll(tiles);
+        if(welcome) {
+            g.drawImage(Welcome.getImage(), 0, 0, width + SPACE, height + SPACE, this);
+            return;
+        }
 
         if(GoodCount > 0 && BadCount > 0) {
             g.drawImage(Background.getImage(), 0, 0, width + SPACE, height + SPACE, this);
@@ -238,20 +241,23 @@ public class Battlefield extends JPanel{
 
             int key = e.getKeyCode();
             if (key == KeyEvent.VK_SPACE) {
-                try {
-                    out = new ObjectOutputStream(new FileOutputStream(new File(((Long)System.currentTimeMillis())+".rcd")));
-                } catch (IOException e1) {
-                    e1.printStackTrace();
-                }
+                if (!welcome){
+                    try {
+                        out = new ObjectOutputStream(new FileOutputStream(new File(((Long)System.currentTimeMillis())+".rcd")));
+                    } catch (IOException e1) {
+                        e1.printStackTrace();
+                    }
 
-                ExecutorService exec = Executors.newCachedThreadPool();
-                for (PlayerPayload player:players
-                     ) {
-                    exec.execute(player);
+                    ExecutorService exec = Executors.newCachedThreadPool();
+                    for (PlayerPayload player:players
+                            ) {
+                        exec.execute(player);
+                    }
+                    exec.execute(shot);
+                    exec.shutdown();
+                    completed = true;
                 }
-                exec.execute(shot);
-                exec.shutdown();
-                completed = true;
+                welcome = false;
             }
             else if (key == KeyEvent.VK_L) {
                 JFileChooser dlg = new JFileChooser();
@@ -261,10 +267,11 @@ public class Battlefield extends JPanel{
 
                     File fn = dlg.getSelectedFile();
 
-                    if(fn != null) {
+                    if (fn != null) {
 
                         isReplay = true;
                         completed = true;
+                        welcome = false;
 
                         ObjectInputStream in = null;
                         try {
@@ -310,7 +317,7 @@ public class Battlefield extends JPanel{
                 while (true) {
                     while (GoodCount <= 0 && BadCount <= 0)
                         Battlefield.this.wait();
-                    TimeUnit.MILLISECONDS.sleep(10);
+                    TimeUnit.MILLISECONDS.sleep(100);
 
                     shot_save.add(new BattlefieldShot(players, GoodCount, BadCount));
 

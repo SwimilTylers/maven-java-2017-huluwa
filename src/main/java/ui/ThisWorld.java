@@ -18,6 +18,6 @@ public class ThisWorld extends JFrame{
         setSize(battlefield.getBoardWidth() + OFFSET,
                 battlefield.getBoardHeight() + 2 * OFFSET);
         setLocationRelativeTo(null);
-        setTitle("Huluwas");
+        setTitle("葫芦娃大战蛇精");
     }
 }

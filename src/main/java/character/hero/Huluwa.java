@@ -40,7 +40,7 @@ abstract public class Huluwa extends Subordinate{
         }
         else if(enemy instanceof Minion){
             int win = new java.util.Random().nextInt(100);
-            if(win > 75)    return false;
+            if(win > 80)    return false;
             return true;
         }
         return true;

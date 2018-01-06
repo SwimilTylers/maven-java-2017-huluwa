@@ -30,6 +30,10 @@ public class Serpent extends Beings implements Representative {
         DUPLICATED_LOCK = true;
     }
 
+    public void unlock(){
+        DUPLICATED_LOCK = false;
+    }
+
     public int getSoldierUnderCommand() {
         return SoldierUnderCommand;
     }

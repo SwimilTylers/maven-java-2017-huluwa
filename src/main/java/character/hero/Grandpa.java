@@ -11,6 +11,7 @@ import utils.FOREGROUNDS;
 import utils.coordinate._2Coordinate;
 import utils.layout.Layout;
 import utils.layout.LayoutBrief;
+import utils.position.BasePosition;
 import utils.sorter.ComparingInterface;
 import utils.sorter.Sorter;
 
@@ -31,6 +32,10 @@ public class Grandpa extends Beings implements Representative {
         if(DUPLICATED_LOCK)
             throw null;
         DUPLICATED_LOCK = true;
+    }
+
+    public void unlock(){
+        DUPLICATED_LOCK = false;
     }
 
     @Override
