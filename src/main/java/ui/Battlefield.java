@@ -98,24 +98,6 @@ public class Battlefield extends JPanel{
         players.add(new PlayerPayload(newGuy, MapModule, this,
                 "Grandpa.png", "DeadGrandpa.png", PlayerPayload.RelativeMove.Random));
 
-        // Huluwas
-        players.add(new HuluwaPayload(new Dawa(new _2Coordinate(8,3)), "Huluwa/Dawa.png", MapModule, this));
-        players.add(new HuluwaPayload(new Erwa(new _2Coordinate(8,4)), "Huluwa/Erwa.png", MapModule, this));
-        players.add(new HuluwaPayload(new Sanwa(new _2Coordinate(8,5)), "Huluwa/Sanwa.png", MapModule, this));
-        players.add(new HuluwaPayload(new Siwa(new _2Coordinate(8,6)), "Huluwa/Siwa.png", MapModule, this));
-        players.add(new HuluwaPayload(new Wuwa(new _2Coordinate(8,7)), "Huluwa/Wuwa.png", MapModule, this));
-        players.add(new HuluwaPayload(new Liuwa(new _2Coordinate(8,8)), "Huluwa/Liuwa.png", MapModule, this));
-        players.add(new HuluwaPayload(new Qiwa(new _2Coordinate(8,9)), "Huluwa/Qiwa.png", MapModule, this));
-
-
-        GoodCount = 8;
-
-
-        // serpent
-        newGuy = new Serpent(new _2Coordinate(28,6));
-        newGuy.Birth(MapModule.Location(newGuy.TellMyBirthplace()));
-        players.add(new PlayerPayload(newGuy, MapModule, this,
-                "Serpent.png", "DeadSerpent.png", PlayerPayload.RelativeMove.Random));
 
         // minion
         players.add(new MinionPayload(new _2Coordinate(20,1), MapModule, this));
@@ -132,6 +114,24 @@ public class Battlefield extends JPanel{
         players.add(new MinionPayload(new _2Coordinate(23,10), MapModule, this));
 
 
+        // Huluwas
+        players.add(new HuluwaPayload(new Dawa(new _2Coordinate(8,3)), "Huluwa/Dawa.png", MapModule, this));
+        players.add(new HuluwaPayload(new Erwa(new _2Coordinate(8,4)), "Huluwa/Erwa.png", MapModule, this));
+        players.add(new HuluwaPayload(new Sanwa(new _2Coordinate(8,5)), "Huluwa/Sanwa.png", MapModule, this));
+        players.add(new HuluwaPayload(new Siwa(new _2Coordinate(8,6)), "Huluwa/Siwa.png", MapModule, this));
+        players.add(new HuluwaPayload(new Wuwa(new _2Coordinate(8,7)), "Huluwa/Wuwa.png", MapModule, this));
+        players.add(new HuluwaPayload(new Liuwa(new _2Coordinate(8,8)), "Huluwa/Liuwa.png", MapModule, this));
+        players.add(new HuluwaPayload(new Qiwa(new _2Coordinate(8,9)), "Huluwa/Qiwa.png", MapModule, this));
+
+
+        // serpent
+        newGuy = new Serpent(new _2Coordinate(28,6));
+        newGuy.Birth(MapModule.Location(newGuy.TellMyBirthplace()));
+        players.add(new PlayerPayload(newGuy, MapModule, this,
+                "Serpent.png", "DeadSerpent.png", PlayerPayload.RelativeMove.Random));
+
+
+        GoodCount = 8;
         BadCount = 11;
 
     }
